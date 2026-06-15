@@ -134,6 +134,8 @@ Heavy machine guns (`CE_MachineGun`) and launchers are excluded from all elven c
 
 Note: `CE_AI_AR` matches both AssaultRifle and ChargeRifle in CE (ChargeRifle has `CE_AI_AR` + `AdvancedGun` tags). Rangers with this tag may occasionally spawn with charge rifles if weapon money overlaps. This is intentional since charge rifles fit the elven precision theme.
 
+Ranged units (scouts, rangers, sharpshooters) have their required helmet upgraded from `Apparel_SimpleHelmet` (medieval pot helmet) to `Apparel_ArmorHelmet` (flak helmet) for better ballistic protection under CE.
+
 Note: Dark Elves have no rifleman line (ranger) or dedicated sharpshooter. Their gene package (Remarkable Melee, Strong Melee Damage, Aggressive) favors close-quarters combat. Their ranged capability comes from a single scout kind and elite nobles with precision rifles.
 
 ## Faction Identity Changes
