@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Elves Expanded - CE</name>
+	<author>opencode</author>
+	<packageId>rimword.ElvesExpandedCE</packageId>
+	<description>Compatibility and flavor expansion for Faction - Elves (ICC.FOV.ELVES) under Combat Extended.
+
+Elves are reimagined as disciplined marksmen and skirmishers who have embraced modern firearms without abandoning their traditions. Each elven faction receives upgraded tech levels, industrial-era weapon loadouts, and CE ammunition preferences that emphasize precision and quality over volume of fire.
+
+- High Elvish Kingdom upgraded to Industrial tech level with scout carbines, ranger rifles, and noble precision weapons
+- Dark Elvish Kingdom upgraded to Industrial tech level with aggressive CQB loadouts and marksman support
+- Wild Elvish Tribe gains hunting rifles while retaining tribal identity
+- Celestia Elvish Empire receives CE loadout properties for its spacer arsenal
+- All combat pawn kinds configured with CE LoadoutPropertiesExtension for proper magazine counts, sidearms, and ammo preferences</description>
+	<supportedVersions>
+		<li>1.6</li>
+	</supportedVersions>
+	<modDependencies>
+		<li>
+			<packageId>ICC.FOV.ELVES</packageId>
+			<displayName>Faction - Elves</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/3726293423</steamWorkshopUrl>
+		</li>
+		<li>
+			<packageId>CETeam.CombatExtended</packageId>
+			<displayName>Combat Extended</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2890901044</steamWorkshopUrl>
+		</li>
+	</modDependencies>
+	<loadAfter>
+		<li>ICC.FOV.ELVES</li>
+		<li>CETeam.CombatExtended</li>
+	</loadAfter>
+</ModMetaData>

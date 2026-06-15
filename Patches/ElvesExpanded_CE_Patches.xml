@@ -1,0 +1,1156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<!-- ==================================================================
+		FACTION TECH LEVEL & TRADER UPGRADES
+		================================================================== -->
+
+	<!-- High Elvish Kingdom: Medieval -> Industrial -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/FactionDef[defName="HighElvishKingdom"]/techLevel</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/FactionDef[defName="HighElvishKingdom"]/techLevel</xpath>
+			<value>
+				<techLevel>Industrial</techLevel>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/FactionDef[defName="HighElvishKingdom"]</xpath>
+			<value>
+				<techLevel>Industrial</techLevel>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/FactionDef[defName="HighElvishKingdom"]/caravanTraderKinds</xpath>
+		<value>
+			<caravanTraderKinds>
+				<li>Caravan_Outlander_BulkGoods</li>
+				<li>Caravan_Outlander_CombatSupplier</li>
+				<li>Caravan_Outlander_Exotic</li>
+			</caravanTraderKinds>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/FactionDef[defName="HighElvishKingdom"]/visitorTraderKinds</xpath>
+		<value>
+			<visitorTraderKinds>
+				<li>Visitor_Outlander_Standard</li>
+			</visitorTraderKinds>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/FactionDef[defName="HighElvishKingdom"]/baseTraderKinds</xpath>
+		<value>
+			<baseTraderKinds>
+				<li>Base_Outlander_Standard</li>
+			</baseTraderKinds>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/FactionDef[defName="HighElvishKingdom"]/raidLootMaker</xpath>
+		<value>
+			<raidLootMaker>OutlanderRaidLootMaker</raidLootMaker>
+		</value>
+	</Operation>
+
+	<!-- Dark Elvish Kingdom: Medieval -> Industrial -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/FactionDef[defName="DarkElvishKingdom"]/techLevel</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/FactionDef[defName="DarkElvishKingdom"]/techLevel</xpath>
+			<value>
+				<techLevel>Industrial</techLevel>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/FactionDef[defName="DarkElvishKingdom"]</xpath>
+			<value>
+				<techLevel>Industrial</techLevel>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/FactionDef[defName="DarkElvishKingdom"]/caravanTraderKinds</xpath>
+		<value>
+			<caravanTraderKinds>
+				<li>Caravan_Outlander_BulkGoods</li>
+				<li>Caravan_Outlander_CombatSupplier</li>
+				<li MayRequire="Ludeon.RimWorld.Ideology">Caravan_Outlander_Slaver</li>
+			</caravanTraderKinds>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/FactionDef[defName="DarkElvishKingdom"]/visitorTraderKinds</xpath>
+		<value>
+			<visitorTraderKinds>
+				<li>Visitor_Outlander_Standard</li>
+			</visitorTraderKinds>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/FactionDef[defName="DarkElvishKingdom"]/baseTraderKinds</xpath>
+		<value>
+			<baseTraderKinds>
+				<li>Base_Outlander_Standard</li>
+			</baseTraderKinds>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/FactionDef[defName="DarkElvishKingdom"]/raidLootMaker</xpath>
+		<value>
+			<raidLootMaker>OutlanderRaidLootMaker</raidLootMaker>
+		</value>
+	</Operation>
+
+	<!-- ==================================================================
+		LABEL CHANGES — HIGH ELVISH
+		================================================================== -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/PawnKindDef[defName="HighElvish_Ranger"]/label</xpath>
+		<value>
+			<label>blademaster</label>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/PawnKindDef[defName="HighElvish_Spearmen"]/label</xpath>
+		<value>
+			<label>ranger</label>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/PawnKindDef[defName="HighElvish_Archer"]/label</xpath>
+		<value>
+			<label>scout</label>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/PawnKindDef[defName="HighElvish_HeavyArcher"]/label</xpath>
+		<value>
+			<label>sharpshooter</label>
+		</value>
+	</Operation>
+
+	<!-- ==================================================================
+		LABEL CHANGES — DARK ELVISH
+		================================================================== -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/PawnKindDef[defName="DarkElvish_Ranger"]/label</xpath>
+		<value>
+			<label>marauder</label>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/PawnKindDef[defName="DarkElvish_Swordmaster"]/label</xpath>
+		<value>
+			<label>blademaster</label>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/PawnKindDef[defName="DarkElvish_Archer"]/label</xpath>
+		<value>
+			<label>scout</label>
+		</value>
+	</Operation>
+
+	<!-- ==================================================================
+		HIGH ELVISH — WEAPON TAG REPLACEMENTS & LOADOUTS
+		================================================================== -->
+
+	<!-- Citizen: non-fighter, keep medieval melee -->
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/PawnKindDef[defName="HighElvish_Citizen"]</xpath>
+		<value>
+			<li Class="CombatExtended.LoadoutPropertiesExtension">
+				<primaryMagazineCount>
+					<min>1</min>
+					<max>2</max>
+				</primaryMagazineCount>
+			</li>
+		</value>
+	</Operation>
+
+	<!-- Noble: trader, sidearm + melee -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/PawnKindDef[defName="HighElvish_Noble"]/weaponTags</xpath>
+		<value>
+			<weaponTags>
+				<li>CE_Sidearm</li>
+				<li>Rapier</li>
+				<li>MedievalMeleeDecent</li>
+			</weaponTags>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/PawnKindDef[defName="HighElvish_Noble"]</xpath>
+		<value>
+			<li Class="CombatExtended.LoadoutPropertiesExtension">
+				<primaryMagazineCount>
+					<min>2</min>
+					<max>4</max>
+				</primaryMagazineCount>
+				<weightedAmmoCategories>
+					<HollowPoint>0.4</HollowPoint>
+					<ArmorPiercing>0.3</ArmorPiercing>
+					<IncendiaryAP>0.3</IncendiaryAP>
+				</weightedAmmoCategories>
+				<shieldMoney>
+					<min>500</min>
+					<max>1000</max>
+				</shieldMoney>
+				<shieldTags>
+					<li>OutlanderShield</li>
+				</shieldTags>
+				<shieldChance>0.5</shieldChance>
+			</li>
+		</value>
+	</Operation>
+
+	<!-- Emperor: elite leader, precision rifle + melee -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/PawnKindDef[defName="HighElvish_Emperor"]/weaponTags</xpath>
+		<value>
+			<weaponTags>
+				<li>CE_AI_SR</li>
+				<li>MedievalMeleeAdvanced</li>
+			</weaponTags>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/PawnKindDef[defName="HighElvish_Emperor"]/weaponMoney</xpath>
+		<value>
+			<weaponMoney>
+				<min>1800</min>
+				<max>3500</max>
+			</weaponMoney>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/PawnKindDef[defName="HighElvish_Emperor"]</xpath>
+		<value>
+			<li Class="CombatExtended.LoadoutPropertiesExtension">
+				<primaryMagazineCount>
+					<min>4</min>
+					<max>8</max>
+				</primaryMagazineCount>
+				<weightedAmmoCategories>
+					<ArmorPiercing>0.4</ArmorPiercing>
+					<HollowPoint>0.3</HollowPoint>
+					<IncendiaryAP>0.3</IncendiaryAP>
+				</weightedAmmoCategories>
+				<shieldMoney>
+					<min>800</min>
+					<max>1600</max>
+				</shieldMoney>
+				<shieldTags>
+					<li>OutlanderShield</li>
+				</shieldTags>
+				<shieldChance>0.6</shieldChance>
+				<sidearms>
+					<li>
+						<sidearmMoney>
+							<min>200</min>
+							<max>400</max>
+						</sidearmMoney>
+						<weaponTags>
+							<li>CE_Sidearm_Melee</li>
+						</weaponTags>
+					</li>
+				</sidearms>
+			</li>
+		</value>
+	</Operation>
+
+	<!-- Ranger -> Blademaster: melee + sidearm -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/PawnKindDef[defName="HighElvish_Ranger"]/weaponTags</xpath>
+		<value>
+			<weaponTags>
+				<li>MedievalMeleeAdvanced</li>
+				<li>Rapier</li>
+			</weaponTags>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/PawnKindDef[defName="HighElvish_Ranger"]</xpath>
+		<value>
+			<li Class="CombatExtended.LoadoutPropertiesExtension">
+				<shieldMoney>
+					<min>300</min>
+					<max>600</max>
+				</shieldMoney>
+				<shieldTags>
+					<li>OutlanderShield</li>
+				</shieldTags>
+				<shieldChance>0.4</shieldChance>
+				<forcedSidearm>
+					<sidearmMoney>
+						<min>80</min>
+						<max>200</max>
+					</sidearmMoney>
+					<weaponTags>
+						<li>CE_Sidearm</li>
+					</weaponTags>
+					<magazineCount>
+						<min>2</min>
+						<max>4</max>
+					</magazineCount>
+				</forcedSidearm>
+			</li>
+		</value>
+	</Operation>
+
+	<!-- Spearmen -> Ranger: assault rifles / bolt-action -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/PawnKindDef[defName="HighElvish_Spearmen"]/weaponTags</xpath>
+		<value>
+			<weaponTags>
+				<li>CE_AI_AR</li>
+				<li>CE_AI_SR</li>
+				<li>SimpleGun</li>
+			</weaponTags>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/PawnKindDef[defName="HighElvish_Spearmen"]/weaponMoney</xpath>
+		<value>
+			<weaponMoney>
+				<min>400</min>
+				<max>900</max>
+			</weaponMoney>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/PawnKindDef[defName="HighElvish_Spearmen"]/skills</xpath>
+		<value>
+			<skills>
+				<li>
+					<skill>Shooting</skill>
+					<range>6~14</range>
+				</li>
+				<li>
+					<skill>Melee</skill>
+					<range>4~10</range>
+				</li>
+			</skills>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/PawnKindDef[defName="HighElvish_Spearmen"]</xpath>
+		<value>
+			<li Class="CombatExtended.LoadoutPropertiesExtension">
+				<primaryMagazineCount>
+					<min>3</min>
+					<max>5</max>
+				</primaryMagazineCount>
+				<minAmmoCount>20</minAmmoCount>
+				<shieldMoney>
+					<min>200</min>
+					<max>400</max>
+				</shieldMoney>
+				<shieldTags>
+					<li>OutlanderShield</li>
+				</shieldTags>
+				<shieldChance>0.3</shieldChance>
+				<sidearms>
+					<li>
+						<generateChance>0.5</generateChance>
+						<sidearmMoney>
+							<min>20</min>
+							<max>120</max>
+						</sidearmMoney>
+						<weaponTags>
+							<li>CE_Sidearm_Melee</li>
+						</weaponTags>
+					</li>
+				</sidearms>
+			</li>
+		</value>
+	</Operation>
+
+	<!-- Swordmaster: elite melee + sidearm -->
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/PawnKindDef[defName="HighElvish_Swordmaster"]</xpath>
+		<value>
+			<li Class="CombatExtended.LoadoutPropertiesExtension">
+				<shieldMoney>
+					<min>500</min>
+					<max>1000</max>
+				</shieldMoney>
+				<shieldTags>
+					<li>OutlanderShield</li>
+				</shieldTags>
+				<shieldChance>0.6</shieldChance>
+				<forcedSidearm>
+					<sidearmMoney>
+						<min>150</min>
+						<max>300</max>
+					</sidearmMoney>
+					<weaponTags>
+						<li>CE_Sidearm</li>
+					</weaponTags>
+					<magazineCount>
+						<min>2</min>
+						<max>4</max>
+					</magazineCount>
+				</forcedSidearm>
+			</li>
+		</value>
+	</Operation>
+
+	<!-- Archer -> Scout: SMG/carbine -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/PawnKindDef[defName="HighElvish_Archer"]/weaponTags</xpath>
+		<value>
+			<weaponTags>
+				<li>CE_SMG</li>
+				<li>CE_Sidearm</li>
+				<li>SimpleGun</li>
+			</weaponTags>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/PawnKindDef[defName="HighElvish_Archer"]/weaponMoney</xpath>
+		<value>
+			<weaponMoney>
+				<min>250</min>
+				<max>500</max>
+			</weaponMoney>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/PawnKindDef[defName="HighElvish_Archer"]/skills</xpath>
+		<value>
+			<skills>
+				<li>
+					<skill>Shooting</skill>
+					<range>6~12</range>
+				</li>
+				<li>
+					<skill>Melee</skill>
+					<range>4~10</range>
+				</li>
+			</skills>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/PawnKindDef[defName="HighElvish_Archer"]</xpath>
+		<value>
+			<li Class="CombatExtended.LoadoutPropertiesExtension">
+				<primaryMagazineCount>
+					<min>3</min>
+					<max>6</max>
+				</primaryMagazineCount>
+				<minAmmoCount>20</minAmmoCount>
+				<sidearms>
+					<li>
+						<generateChance>0.5</generateChance>
+						<sidearmMoney>
+							<min>20</min>
+							<max>100</max>
+						</sidearmMoney>
+						<weaponTags>
+							<li>CE_Sidearm_Melee</li>
+						</weaponTags>
+					</li>
+				</sidearms>
+			</li>
+		</value>
+	</Operation>
+
+	<!-- HeavyArcher -> Sharpshooter: precision rifles only -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/PawnKindDef[defName="HighElvish_HeavyArcher"]/weaponTags</xpath>
+		<value>
+			<weaponTags>
+				<li>CE_AI_SR</li>
+			</weaponTags>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/PawnKindDef[defName="HighElvish_HeavyArcher"]/weaponMoney</xpath>
+		<value>
+			<weaponMoney>
+				<min>400</min>
+				<max>1000</max>
+			</weaponMoney>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/PawnKindDef[defName="HighElvish_HeavyArcher"]/skills</xpath>
+		<value>
+			<skills>
+				<li>
+					<skill>Shooting</skill>
+					<range>8~16</range>
+				</li>
+				<li>
+					<skill>Melee</skill>
+					<range>2~6</range>
+				</li>
+			</skills>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/PawnKindDef[defName="HighElvish_HeavyArcher"]</xpath>
+		<value>
+			<li Class="CombatExtended.LoadoutPropertiesExtension">
+				<primaryMagazineCount>
+					<min>3</min>
+					<max>5</max>
+				</primaryMagazineCount>
+				<weightedAmmoCategories>
+					<HollowPoint>0.4</HollowPoint>
+					<ArmorPiercing>0.3</ArmorPiercing>
+					<IncendiaryAP>0.3</IncendiaryAP>
+				</weightedAmmoCategories>
+				<minAmmoCount>20</minAmmoCount>
+				<sidearms>
+					<li>
+						<generateChance>0.5</generateChance>
+						<sidearmMoney>
+							<min>80</min>
+							<max>200</max>
+						</sidearmMoney>
+						<weaponTags>
+							<li>CE_Sidearm</li>
+						</weaponTags>
+						<magazineCount>
+							<min>1</min>
+							<max>3</max>
+						</magazineCount>
+					</li>
+				</sidearms>
+			</li>
+		</value>
+	</Operation>
+
+	<!-- ==================================================================
+		DARK ELVISH — WEAPON TAG REPLACEMENTS & LOADOUTS
+		================================================================== -->
+
+	<!-- Citizen: non-fighter, keep medieval melee -->
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/PawnKindDef[defName="DarkElvish_Citizen"]</xpath>
+		<value>
+			<li Class="CombatExtended.LoadoutPropertiesExtension">
+				<primaryMagazineCount>
+					<min>1</min>
+					<max>2</max>
+				</primaryMagazineCount>
+			</li>
+		</value>
+	</Operation>
+
+	<!-- Noble: trader, sidearm -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/PawnKindDef[defName="DarkElvish_Noble"]/weaponTags</xpath>
+		<value>
+			<weaponTags>
+				<li>CE_Sidearm</li>
+				<li>MedievalMeleeDecent</li>
+			</weaponTags>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/PawnKindDef[defName="DarkElvish_Noble"]</xpath>
+		<value>
+			<li Class="CombatExtended.LoadoutPropertiesExtension">
+				<primaryMagazineCount>
+					<min>2</min>
+					<max>4</max>
+				</primaryMagazineCount>
+				<weightedAmmoCategories>
+					<ArmorPiercing>0.4</ArmorPiercing>
+					<HollowPoint>0.3</HollowPoint>
+					<IncendiaryAP>0.3</IncendiaryAP>
+				</weightedAmmoCategories>
+			</li>
+		</value>
+	</Operation>
+
+	<!-- Lord: elite leader, precision rifle + melee -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/PawnKindDef[defName="DarkElvish_Lord"]/weaponTags</xpath>
+		<value>
+			<weaponTags>
+				<li>CE_AI_SR</li>
+				<li>MedievalMeleeAdvanced</li>
+			</weaponTags>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/PawnKindDef[defName="DarkElvish_Lord"]/weaponMoney</xpath>
+		<value>
+			<weaponMoney>
+				<min>1800</min>
+				<max>3500</max>
+			</weaponMoney>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/PawnKindDef[defName="DarkElvish_Lord"]</xpath>
+		<value>
+			<li Class="CombatExtended.LoadoutPropertiesExtension">
+				<primaryMagazineCount>
+					<min>4</min>
+					<max>8</max>
+				</primaryMagazineCount>
+				<weightedAmmoCategories>
+					<ArmorPiercing>0.4</ArmorPiercing>
+					<HollowPoint>0.3</HollowPoint>
+					<IncendiaryAP>0.3</IncendiaryAP>
+				</weightedAmmoCategories>
+				<shieldMoney>
+					<min>800</min>
+					<max>1600</max>
+				</shieldMoney>
+				<shieldTags>
+					<li>OutlanderShield</li>
+				</shieldTags>
+				<shieldChance>0.6</shieldChance>
+				<sidearms>
+					<li>
+						<sidearmMoney>
+							<min>200</min>
+							<max>400</max>
+						</sidearmMoney>
+						<weaponTags>
+							<li>CE_Sidearm_Melee</li>
+						</weaponTags>
+					</li>
+				</sidearms>
+			</li>
+		</value>
+	</Operation>
+
+	<!-- Ranger -> Reiver: melee + sidearm -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/PawnKindDef[defName="DarkElvish_Ranger"]/weaponTags</xpath>
+		<value>
+			<weaponTags>
+				<li>MedievalMeleeAdvanced</li>
+			</weaponTags>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/PawnKindDef[defName="DarkElvish_Ranger"]/weaponMoney</xpath>
+		<value>
+			<weaponMoney>
+				<min>400</min>
+				<max>800</max>
+			</weaponMoney>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/PawnKindDef[defName="DarkElvish_Ranger"]/skills</xpath>
+		<value>
+			<skills>
+				<li>
+					<skill>Melee</skill>
+					<range>4~14</range>
+				</li>
+			</skills>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/PawnKindDef[defName="DarkElvish_Ranger"]</xpath>
+		<value>
+			<li Class="CombatExtended.LoadoutPropertiesExtension">
+				<shieldMoney>
+					<min>200</min>
+					<max>400</max>
+				</shieldMoney>
+				<shieldTags>
+					<li>OutlanderShield</li>
+				</shieldTags>
+				<shieldChance>0.4</shieldChance>
+				<forcedSidearm>
+					<sidearmMoney>
+						<min>80</min>
+						<max>200</max>
+					</sidearmMoney>
+					<weaponTags>
+						<li>CE_Sidearm</li>
+					</weaponTags>
+					<magazineCount>
+						<min>2</min>
+						<max>4</max>
+					</magazineCount>
+				</forcedSidearm>
+			</li>
+		</value>
+	</Operation>
+
+	<!-- Spearmen: keep melee (no change needed) -->
+
+	<!-- Swordmaster: elite melee + sidearm -->
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/PawnKindDef[defName="DarkElvish_Swordmaster"]</xpath>
+		<value>
+			<li Class="CombatExtended.LoadoutPropertiesExtension">
+				<shieldMoney>
+					<min>500</min>
+					<max>1000</max>
+				</shieldMoney>
+				<shieldTags>
+					<li>OutlanderShield</li>
+				</shieldTags>
+				<shieldChance>0.6</shieldChance>
+				<forcedSidearm>
+					<sidearmMoney>
+						<min>150</min>
+						<max>300</max>
+					</sidearmMoney>
+					<weaponTags>
+						<li>CE_Sidearm</li>
+					</weaponTags>
+					<magazineCount>
+						<min>2</min>
+						<max>4</max>
+					</magazineCount>
+				</forcedSidearm>
+			</li>
+		</value>
+	</Operation>
+
+	<!-- Archer -> Scout: SMG/carbine -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/PawnKindDef[defName="DarkElvish_Archer"]/weaponTags</xpath>
+		<value>
+			<weaponTags>
+				<li>CE_SMG</li>
+				<li>CE_Sidearm</li>
+				<li>SimpleGun</li>
+			</weaponTags>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/PawnKindDef[defName="DarkElvish_Archer"]/weaponMoney</xpath>
+		<value>
+			<weaponMoney>
+				<min>250</min>
+				<max>500</max>
+			</weaponMoney>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/PawnKindDef[defName="DarkElvish_Archer"]/skills</xpath>
+		<value>
+			<skills>
+				<li>
+					<skill>Shooting</skill>
+					<range>6~12</range>
+				</li>
+				<li>
+					<skill>Melee</skill>
+					<range>4~10</range>
+				</li>
+			</skills>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/PawnKindDef[defName="DarkElvish_Archer"]</xpath>
+		<value>
+			<li Class="CombatExtended.LoadoutPropertiesExtension">
+				<primaryMagazineCount>
+					<min>3</min>
+					<max>6</max>
+				</primaryMagazineCount>
+				<minAmmoCount>20</minAmmoCount>
+				<sidearms>
+					<li>
+						<generateChance>0.5</generateChance>
+						<sidearmMoney>
+							<min>20</min>
+							<max>100</max>
+						</sidearmMoney>
+						<weaponTags>
+							<li>CE_Sidearm_Melee</li>
+						</weaponTags>
+					</li>
+				</sidearms>
+			</li>
+		</value>
+	</Operation>
+
+	<!-- ==================================================================
+		WILD ELVISH — WEAPON TAG REPLACEMENTS & LOADOUTS
+		================================================================== -->
+
+	<!-- Warrior: keep melee, CE loadout -->
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/PawnKindDef[defName="WildElvish_warrior"]</xpath>
+		<value>
+			<li Class="CombatExtended.LoadoutPropertiesExtension">
+				<shieldMoney>
+					<min>100</min>
+					<max>150</max>
+				</shieldMoney>
+				<shieldTags>
+					<li>TribalShield</li>
+				</shieldTags>
+				<shieldChance>0.6</shieldChance>
+			</li>
+		</value>
+	</Operation>
+
+	<!-- Swordkins: keep melee, add tribal sidearm -->
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/PawnKindDef[defName="WildElvish_Swordkins"]</xpath>
+		<value>
+			<li Class="CombatExtended.LoadoutPropertiesExtension">
+				<shieldMoney>
+					<min>100</min>
+					<max>150</max>
+				</shieldMoney>
+				<shieldTags>
+					<li>TribalShield</li>
+				</shieldTags>
+				<shieldChance>0.6</shieldChance>
+			</li>
+		</value>
+	</Operation>
+
+	<!-- SwornBlade: keep melee, add tribal sidearm -->
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/PawnKindDef[defName="WildElvish_SwornBlade"]</xpath>
+		<value>
+			<li Class="CombatExtended.LoadoutPropertiesExtension">
+				<shieldMoney>
+					<min>120</min>
+					<max>160</max>
+				</shieldMoney>
+				<shieldTags>
+					<li>TribalShield</li>
+				</shieldTags>
+				<shieldChance>0.7</shieldChance>
+			</li>
+		</value>
+	</Operation>
+
+	<!-- Archer: keep neolithic bow -->
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/PawnKindDef[defName="WildElvish_Archer"]</xpath>
+		<value>
+			<li Class="CombatExtended.LoadoutPropertiesExtension">
+				<primaryMagazineCount>
+					<min>4</min>
+					<max>6</max>
+				</primaryMagazineCount>
+				<shieldMoney>
+					<min>100</min>
+					<max>130</max>
+				</shieldMoney>
+				<shieldTags>
+					<li>TribalShield</li>
+				</shieldTags>
+				<shieldChance>0.5</shieldChance>
+				<sidearms>
+					<li>
+						<sidearmMoney>
+							<min>80</min>
+							<max>160</max>
+						</sidearmMoney>
+						<weaponTags>
+							<li>CE_Sidearm_Tribal</li>
+						</weaponTags>
+					</li>
+				</sidearms>
+			</li>
+		</value>
+	</Operation>
+
+	<!-- Hunter: keep bow, CE loadout -->
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/PawnKindDef[defName="WildElvish_Hunter"]</xpath>
+		<value>
+			<li Class="CombatExtended.LoadoutPropertiesExtension">
+				<primaryMagazineCount>
+					<min>3</min>
+					<max>6</max>
+				</primaryMagazineCount>
+				<shieldMoney>
+					<min>100</min>
+					<max>140</max>
+				</shieldMoney>
+				<shieldTags>
+					<li>TribalShield</li>
+				</shieldTags>
+				<shieldChance>0.4</shieldChance>
+				<sidearms>
+					<li>
+						<sidearmMoney>
+							<min>80</min>
+							<max>160</max>
+						</sidearmMoney>
+						<weaponTags>
+							<li>CE_Sidearm_Tribal</li>
+						</weaponTags>
+					</li>
+				</sidearms>
+			</li>
+		</value>
+	</Operation>
+
+	<!-- HeavyArcher: keep neolithic heavy bow -->
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/PawnKindDef[defName="WildElvish_HeavyArcher"]</xpath>
+		<value>
+			<li Class="CombatExtended.LoadoutPropertiesExtension">
+				<primaryMagazineCount>
+					<min>4</min>
+					<max>7</max>
+				</primaryMagazineCount>
+				<shieldMoney>
+					<min>100</min>
+					<max>160</max>
+				</shieldMoney>
+				<shieldTags>
+					<li>TribalShield</li>
+				</shieldTags>
+				<shieldChance>0.5</shieldChance>
+				<sidearms>
+					<li>
+						<sidearmMoney>
+							<min>80</min>
+							<max>200</max>
+						</sidearmMoney>
+						<weaponTags>
+							<li>CE_Sidearm_Tribal</li>
+						</weaponTags>
+					</li>
+				</sidearms>
+			</li>
+		</value>
+	</Operation>
+
+	<!-- Chief: keep melee, CE loadout -->
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/PawnKindDef[defName="HighElvish_Chief"]</xpath>
+		<value>
+			<li Class="CombatExtended.LoadoutPropertiesExtension">
+				<shieldMoney>
+					<min>120</min>
+					<max>160</max>
+				</shieldMoney>
+				<shieldTags>
+					<li>TribalShield</li>
+				</shieldTags>
+				<shieldChance>0.5</shieldChance>
+			</li>
+		</value>
+	</Operation>
+
+	<!-- ==================================================================
+		CELESTIA ELVISH — LOADOUT PROPERTIES (already spacer-tier)
+		================================================================== -->
+
+	<!-- Citizen -->
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/PawnKindDef[defName="CelestiaElvish_Citizen"]</xpath>
+		<value>
+			<li Class="CombatExtended.LoadoutPropertiesExtension">
+				<primaryMagazineCount>
+					<min>1</min>
+					<max>2</max>
+				</primaryMagazineCount>
+			</li>
+		</value>
+	</Operation>
+
+	<!-- Trader -->
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/PawnKindDef[defName="CelestiaElvish_Trader"]</xpath>
+		<value>
+			<li Class="CombatExtended.LoadoutPropertiesExtension">
+				<primaryMagazineCount>
+					<min>2</min>
+					<max>4</max>
+				</primaryMagazineCount>
+			</li>
+		</value>
+	</Operation>
+
+	<!-- Councilor: elite leader -->
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/PawnKindDef[defName="CelestiaElvish_Council"]</xpath>
+		<value>
+			<li Class="CombatExtended.LoadoutPropertiesExtension">
+				<primaryMagazineCount>
+					<min>4</min>
+					<max>8</max>
+				</primaryMagazineCount>
+				<weightedAmmoCategories>
+					<ArmorPiercing>0.3</ArmorPiercing>
+					<HollowPoint>0.3</HollowPoint>
+					<IncendiaryAP>0.2</IncendiaryAP>
+					<ExplosiveAP>0.2</ExplosiveAP>
+				</weightedAmmoCategories>
+				<shieldMoney>
+					<min>1000</min>
+					<max>1600</max>
+				</shieldMoney>
+				<shieldTags>
+					<li>OutlanderShield</li>
+				</shieldTags>
+				<shieldChance>0.7</shieldChance>
+				<sidearms>
+					<li>
+						<sidearmMoney>
+							<min>200</min>
+							<max>400</max>
+						</sidearmMoney>
+						<weaponTags>
+							<li>CE_Sidearm_Melee</li>
+						</weaponTags>
+					</li>
+				</sidearms>
+			</li>
+		</value>
+	</Operation>
+
+	<!-- BladeMaster: melee + sidearm -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/PawnKindDef[defName="CelestiaElvish_BladeMaster"]/weaponTags</xpath>
+		<value>
+			<weaponTags>
+				<li>LongSword</li>
+				<li>CE_Sidearm_Melee</li>
+			</weaponTags>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/PawnKindDef[defName="CelestiaElvish_BladeMaster"]</xpath>
+		<value>
+			<li Class="CombatExtended.LoadoutPropertiesExtension">
+				<shieldMoney>
+					<min>1000</min>
+					<max>1600</max>
+				</shieldMoney>
+				<shieldTags>
+					<li>OutlanderShield</li>
+				</shieldTags>
+				<shieldChance>0.8</shieldChance>
+				<forcedSidearm>
+					<sidearmMoney>
+						<min>200</min>
+						<max>400</max>
+					</sidearmMoney>
+					<weaponTags>
+						<li>CE_Sidearm</li>
+					</weaponTags>
+					<magazineCount>
+						<min>2</min>
+						<max>4</max>
+					</magazineCount>
+				</forcedSidearm>
+			</li>
+		</value>
+	</Operation>
+
+	<!-- Ranger: spacer guns (keep) + loadout -->
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/PawnKindDef[defName="CelestiaElvish_Ranger"]</xpath>
+		<value>
+			<li Class="CombatExtended.LoadoutPropertiesExtension">
+				<primaryMagazineCount>
+					<min>3</min>
+					<max>5</max>
+				</primaryMagazineCount>
+				<minAmmoCount>20</minAmmoCount>
+				<shieldMoney>
+					<min>800</min>
+					<max>1200</max>
+				</shieldMoney>
+				<shieldTags>
+					<li>OutlanderShield</li>
+				</shieldTags>
+				<shieldChance>0.5</shieldChance>
+				<sidearms>
+					<li>
+						<sidearmMoney>
+							<min>200</min>
+							<max>400</max>
+						</sidearmMoney>
+						<weaponTags>
+							<li>CE_Sidearm_Melee</li>
+						</weaponTags>
+					</li>
+				</sidearms>
+			</li>
+		</value>
+	</Operation>
+
+	<!-- Mechanitor: spacer guns + loadout -->
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/PawnKindDef[defName="CelestiaElvish_Mechanitor"]</xpath>
+		<value>
+			<li Class="CombatExtended.LoadoutPropertiesExtension">
+				<primaryMagazineCount>
+					<min>3</min>
+					<max>5</max>
+				</primaryMagazineCount>
+				<minAmmoCount>20</minAmmoCount>
+				<shieldMoney>
+					<min>800</min>
+					<max>1200</max>
+				</shieldMoney>
+				<shieldTags>
+					<li>OutlanderShield</li>
+				</shieldTags>
+				<shieldChance>0.5</shieldChance>
+				<sidearms>
+					<li>
+						<sidearmMoney>
+							<min>200</min>
+							<max>400</max>
+						</sidearmMoney>
+						<weaponTags>
+							<li>CE_Sidearm_Melee</li>
+						</weaponTags>
+					</li>
+				</sidearms>
+			</li>
+		</value>
+	</Operation>
+
+</Patch>
