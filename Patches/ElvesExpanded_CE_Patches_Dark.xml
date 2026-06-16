@@ -99,8 +99,23 @@
 	<Operation Class="PatchOperationRemove">
 		<xpath>Defs/PawnKindDef[defName="DarkElvish_Archer"]/apparelRequired/li[.="Apparel_HatHood"]</xpath>
 	</Operation>
-	<Operation Class="PatchOperationRemove">
+	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/PawnKindDef[defName="DarkElvish_Archer"]/specificApparelRequirements/li[bodyPartGroup="UpperHead"]</xpath>
+		<value>
+			<li>
+				<bodyPartGroup>UpperHead</bodyPartGroup>
+				<alternateTagChoices>
+					<li>
+						<tag>IndustrialMilitaryBasic</tag>
+						<chance>0.6</chance>
+					</li>
+					<li>
+						<tag>IndustrialMilitaryAdvanced</tag>
+						<chance>0.4</chance>
+					</li>
+				</alternateTagChoices>
+			</li>
+		</value>
 	</Operation>
 	<Operation Class="PatchOperationConditional">
 		<xpath>Defs/PawnKindDef[defName="DarkElvish_Archer"]/apparelDisallowTags</xpath>
@@ -173,8 +188,23 @@
 	<Operation Class="PatchOperationRemove">
 		<xpath>Defs/PawnKindDef[defName="DarkElvish_Swordmaster"]/apparelRequired/li[.="Apparel_SimpleHelmet"]</xpath>
 	</Operation>
-	<Operation Class="PatchOperationRemove">
+	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/PawnKindDef[defName="DarkElvish_Swordmaster"]/specificApparelRequirements/li[bodyPartGroup="UpperHead"]</xpath>
+		<value>
+			<li>
+				<bodyPartGroup>UpperHead</bodyPartGroup>
+				<alternateTagChoices>
+					<li>
+						<tag>IndustrialMilitaryBasic</tag>
+						<chance>0.6</chance>
+					</li>
+					<li>
+						<tag>IndustrialMilitaryAdvanced</tag>
+						<chance>0.4</chance>
+					</li>
+				</alternateTagChoices>
+			</li>
+		</value>
 	</Operation>
 	<Operation Class="PatchOperationRemove">
 		<xpath>Defs/PawnKindDef[defName="DarkElvish_Swordmaster"]/specificApparelRequirements/li[bodyPartGroup="FullHead"]</xpath>
@@ -212,16 +242,6 @@
 	<!-- ==================================================================
 		WEAPON TAG REPLACEMENTS &amp; LOADOUTS
 		================================================================== -->
-
-	<!-- Lord: remove forced war veil before adding helmet -->
-	<Operation Class="PatchOperationRemove">
-		<xpath>Defs/PawnKindDef[defName="DarkElvish_Lord"]/apparelRequired/li[.="Apparel_WarVeil"]</xpath>
-	</Operation>
-
-	<!-- DarkElvish_Spearmen: remove forced hood before adding helmet -->
-	<Operation Class="PatchOperationRemove">
-		<xpath>Defs/PawnKindDef[defName="DarkElvish_Spearmen"]/apparelRequired/li[.="Apparel_HatHood"]</xpath>
-	</Operation>
 
 	<!-- Lord: elite leader, precision rifle + melee -->
 	<Operation Class="PatchOperationReplace">
@@ -435,41 +455,63 @@
 	</Operation>
 
 	<!-- ==================================================================
-		FORCED HEADGEAR: flak helmet on all combat pawns
+		HEADGEAR REQUIREMENTS: military helmet via requiredTag
 		================================================================== -->
 
 	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/PawnKindDef[defName="DarkElvish_Lord"]/apparelRequired</xpath>
+		<xpath>Defs/PawnKindDef[defName="DarkElvish_Lord"]/specificApparelRequirements</xpath>
 		<value>
-			<li>Apparel_AdvancedHelmet</li>
+			<li>
+				<bodyPartGroup>UpperHead</bodyPartGroup>
+				<alternateTagChoices>
+					<li>
+						<tag>IndustrialMilitaryBasic</tag>
+						<chance>0.6</chance>
+					</li>
+					<li>
+						<tag>IndustrialMilitaryAdvanced</tag>
+						<chance>0.4</chance>
+					</li>
+				</alternateTagChoices>
+			</li>
 		</value>
 	</Operation>
 
 	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/PawnKindDef[defName="DarkElvish_Ranger"]/apparelRequired</xpath>
+		<xpath>Defs/PawnKindDef[defName="DarkElvish_Ranger"]/specificApparelRequirements</xpath>
 		<value>
-			<li>Apparel_AdvancedHelmet</li>
+			<li>
+				<bodyPartGroup>UpperHead</bodyPartGroup>
+				<alternateTagChoices>
+					<li>
+						<tag>IndustrialMilitaryBasic</tag>
+						<chance>0.6</chance>
+					</li>
+					<li>
+						<tag>IndustrialMilitaryAdvanced</tag>
+						<chance>0.4</chance>
+					</li>
+				</alternateTagChoices>
+			</li>
 		</value>
 	</Operation>
 
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/PawnKindDef[defName="DarkElvish_Swordmaster"]/apparelRequired</xpath>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/PawnKindDef[defName="DarkElvish_Spearmen"]/specificApparelRequirements/li[bodyPartGroup="UpperHead"]</xpath>
 		<value>
-			<li>Apparel_AdvancedHelmet</li>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/PawnKindDef[defName="DarkElvish_Archer"]/apparelRequired</xpath>
-		<value>
-			<li>Apparel_AdvancedHelmet</li>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/PawnKindDef[defName="DarkElvish_Spearmen"]/apparelRequired</xpath>
-		<value>
-			<li>Apparel_AdvancedHelmet</li>
+			<li>
+				<bodyPartGroup>UpperHead</bodyPartGroup>
+				<alternateTagChoices>
+					<li>
+						<tag>IndustrialMilitaryBasic</tag>
+						<chance>0.6</chance>
+					</li>
+					<li>
+						<tag>IndustrialMilitaryAdvanced</tag>
+						<chance>0.4</chance>
+					</li>
+				</alternateTagChoices>
+			</li>
 		</value>
 	</Operation>
 
