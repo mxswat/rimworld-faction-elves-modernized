@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<!-- ==================================================================
+		CELESTIA ELVISH — LOADOUT PROPERTIES (already spacer-tier)
+		================================================================== -->
+
+	<!-- Councilor: elite leader -->
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/PawnKindDef[defName="CelestiaElvish_Council"]</xpath>
+		<value>
+			<li Class="CombatExtended.LoadoutPropertiesExtension">
+				<primaryMagazineCount>
+					<min>4</min>
+					<max>8</max>
+				</primaryMagazineCount>
+				<weightedAmmoCategories>
+					<ArmorPiercing>0.3</ArmorPiercing>
+					<HollowPoint>0.3</HollowPoint>
+					<IncendiaryAP>0.2</IncendiaryAP>
+					<ExplosiveAP>0.2</ExplosiveAP>
+				</weightedAmmoCategories>
+				<shieldMoney>
+					<min>1000</min>
+					<max>1600</max>
+				</shieldMoney>
+				<shieldTags>
+					<li>OutlanderShield</li>
+				</shieldTags>
+				<shieldChance>0.7</shieldChance>
+				<sidearms>
+					<li>
+						<sidearmMoney>
+							<min>200</min>
+							<max>400</max>
+						</sidearmMoney>
+						<weaponTags>
+							<li>CE_Sidearm_Melee</li>
+						</weaponTags>
+					</li>
+				</sidearms>
+			</li>
+		</value>
+	</Operation>
+
+	<!-- BladeMaster: melee + sidearm -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/PawnKindDef[defName="CelestiaElvish_BladeMaster"]/weaponTags</xpath>
+		<value>
+			<weaponTags>
+				<li>LongSword</li>
+				<li>CE_Sidearm_Melee</li>
+			</weaponTags>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/PawnKindDef[defName="CelestiaElvish_BladeMaster"]</xpath>
+		<value>
+			<li Class="CombatExtended.LoadoutPropertiesExtension">
+				<shieldMoney>
+					<min>1000</min>
+					<max>1600</max>
+				</shieldMoney>
+				<shieldTags>
+					<li>OutlanderShield</li>
+				</shieldTags>
+				<shieldChance>0.8</shieldChance>
+				<forcedSidearm>
+					<sidearmMoney>
+						<min>200</min>
+						<max>400</max>
+					</sidearmMoney>
+					<weaponTags>
+						<li>CE_Sidearm</li>
+					</weaponTags>
+					<magazineCount>
+						<min>2</min>
+						<max>4</max>
+					</magazineCount>
+				</forcedSidearm>
+			</li>
+		</value>
+	</Operation>
+
+	<!-- Ranger: spacer guns (keep) + loadout -->
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/PawnKindDef[defName="CelestiaElvish_Ranger"]</xpath>
+		<value>
+			<li Class="CombatExtended.LoadoutPropertiesExtension">
+				<primaryMagazineCount>
+					<min>3</min>
+					<max>5</max>
+				</primaryMagazineCount>
+				<minAmmoCount>20</minAmmoCount>
+				<shieldMoney>
+					<min>800</min>
+					<max>1200</max>
+				</shieldMoney>
+				<shieldTags>
+					<li>OutlanderShield</li>
+				</shieldTags>
+				<shieldChance>0.5</shieldChance>
+				<sidearms>
+					<li>
+						<sidearmMoney>
+							<min>200</min>
+							<max>400</max>
+						</sidearmMoney>
+						<weaponTags>
+							<li>CE_Sidearm_Melee</li>
+						</weaponTags>
+					</li>
+				</sidearms>
+			</li>
+		</value>
+	</Operation>
+
+	<!-- Mechanitor: spacer guns + loadout -->
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/PawnKindDef[defName="CelestiaElvish_Mechanitor"]</xpath>
+		<value>
+			<li Class="CombatExtended.LoadoutPropertiesExtension">
+				<primaryMagazineCount>
+					<min>3</min>
+					<max>5</max>
+				</primaryMagazineCount>
+				<minAmmoCount>20</minAmmoCount>
+				<shieldMoney>
+					<min>800</min>
+					<max>1200</max>
+				</shieldMoney>
+				<shieldTags>
+					<li>OutlanderShield</li>
+				</shieldTags>
+				<shieldChance>0.5</shieldChance>
+				<sidearms>
+					<li>
+						<sidearmMoney>
+							<min>200</min>
+							<max>400</max>
+						</sidearmMoney>
+						<weaponTags>
+							<li>CE_Sidearm_Melee</li>
+						</weaponTags>
+					</li>
+				</sidearms>
+			</li>
+		</value>
+	</Operation>
+
+</Patch>
