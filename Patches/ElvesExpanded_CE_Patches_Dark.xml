@@ -397,6 +397,7 @@
 		<value>
 			<weaponTags>
 				<li>CE_SMG</li>
+				<li>CE_AI_AR</li>
 				<li>CE_Sidearm</li>
 				<li>SimpleGun</li>
 			</weaponTags>
