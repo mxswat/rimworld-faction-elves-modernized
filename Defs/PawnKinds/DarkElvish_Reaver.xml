@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<!-- Dark Elvish Reaver - short-range rusher (SMG + shotgun) -->
+	<PawnKindDef ParentName="DarkElvish">
+		<defName>DarkElvish_Reaver</defName>
+		<label>reaver</label>
+		<combatPower>85</combatPower>
+		<isFighter>true</isFighter>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+		<gearHealthRange>0.8~2</gearHealthRange>
+		<disallowedTraits>
+			<li>Brawler</li>
+		</disallowedTraits>
+		<apparelTags>
+			<li>IndustrialMilitaryBasic</li>
+			<li>IndustrialMilitaryAdvanced</li>
+		</apparelTags>
+		<apparelDisallowTags>
+			<li>Royal</li>
+			<li>Circlet</li>
+			<li>Robe</li>
+			<li>BestowerHood</li>
+		</apparelDisallowTags>
+		<apparelRequired>
+			<li>Apparel_HatHood</li>
+		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<bodyPartGroup>UpperHead</bodyPartGroup>
+				<stuff>DevilstrandCloth</stuff>
+			</li>
+			<li>
+				<bodyPartGroup>Torso</bodyPartGroup>
+				<apparelLayer>Middle</apparelLayer>
+				<requiredTag>IndustrialMilitaryBasic</requiredTag>
+			</li>
+		</specificApparelRequirements>
+		<apparelMoney>400~700</apparelMoney>
+		<weaponTags>
+			<li>CE_SMG</li>
+			<li>CE_AI_BROOM</li>
+		</weaponTags>
+		<weaponMoney>
+			<min>250</min>
+			<max>500</max>
+		</weaponMoney>
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>6~12</range>
+			</li>
+			<li>
+				<skill>Melee</skill>
+				<range>4~10</range>
+			</li>
+		</skills>
+		<modExtensions>
+			<li Class="CombatExtended.LoadoutPropertiesExtension">
+				<primaryMagazineCount>
+					<min>3</min>
+					<max>5</max>
+				</primaryMagazineCount>
+				<minAmmoCount>20</minAmmoCount>
+				<sidearms>
+					<li>
+						<generateChance>0.5</generateChance>
+						<sidearmMoney>
+							<min>20</min>
+							<max>100</max>
+						</sidearmMoney>
+						<weaponTags>
+							<li>CE_Sidearm_Melee</li>
+						</weaponTags>
+					</li>
+				</sidearms>
+			</li>
+		</modExtensions>
+		<techHediffsChance>0.04</techHediffsChance>
+		<techHediffsMoney>50~700</techHediffsMoney>
+		<techHediffsTags>
+			<li>Poor</li>
+		</techHediffsTags>
+		<initialWillRange>1~3</initialWillRange>
+		<initialResistanceRange>18~30</initialResistanceRange>
+	</PawnKindDef>
+
+</Defs>

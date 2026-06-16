@@ -56,10 +56,11 @@ Combat kinds: 3 ranged (scout, ranger, sharpshooter) + 1 melee (blademaster). Ba
 | `Swordmaster` | swordmaster | **blademaster** | elite melee + sidearm |
 | `Noble` | noble | *(unchanged)* | trader, sidearm + melee |
 | `Lord` | emperor | *(unchanged)* | leader, precision + melee |
+| `Reaver` | *(new)* | **reaver** | SMG + shotgun rusher |
 | `Citizen` | citizen | *(unchanged)* | civilian |
 | `Child` | citizen | *(unchanged)* | civilian |
 
-Combat kinds: 1 ranged (scout) + 3 melee (marauder, spearmen, blademaster). Melee-heavy to match their gene package (Remarkable Melee, Strong Melee Damage, Aggressive).
+Combat kinds: 2 ranged (scout, reaver) + 3 melee (marauder, spearmen, blademaster). Melee-heavy to match their gene package, with a new CQB option.
 
 ### Wild Elvish Tribe
 
@@ -187,6 +188,7 @@ CE integration uses `LoadoutPropertiesExtension` added via `PatchOperationAddMod
 - `DarkElvish_Lord`: weaponTags precision + melee, elite CE loadout
 - `DarkElvish_Ranger`: label becomes "marauder", melee + sidearm
 - `DarkElvish_Swordmaster`: label becomes "blademaster", elite melee + sidearm
+- `DarkElvish_Reaver`: **new** rusher, SMG + shotgun loadout, devilstrand hood
 - `DarkElvish_Archer`: label becomes "scout", SMG loadout
 
 Dark Elvish Spearmen keep their original label and melee role (unchanged).
