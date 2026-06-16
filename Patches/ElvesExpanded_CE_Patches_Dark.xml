@@ -213,6 +213,16 @@
 		WEAPON TAG REPLACEMENTS &amp; LOADOUTS
 		================================================================== -->
 
+	<!-- Lord: remove forced war veil before adding helmet -->
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/PawnKindDef[defName="DarkElvish_Lord"]/apparelRequired/li[.="Apparel_WarVeil"]</xpath>
+	</Operation>
+
+	<!-- DarkElvish_Spearmen: remove forced hood before adding helmet -->
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/PawnKindDef[defName="DarkElvish_Spearmen"]/apparelRequired/li[.="Apparel_HatHood"]</xpath>
+	</Operation>
+
 	<!-- Lord: elite leader, precision rifle + melee -->
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/PawnKindDef[defName="DarkElvish_Lord"]/weaponTags</xpath>
@@ -421,6 +431,45 @@
 					</li>
 				</sidearms>
 			</li>
+		</value>
+	</Operation>
+
+	<!-- ==================================================================
+		FORCED HEADGEAR: flak helmet on all combat pawns
+		================================================================== -->
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/PawnKindDef[defName="DarkElvish_Lord"]/apparelRequired</xpath>
+		<value>
+			<li>Apparel_AdvancedHelmet</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/PawnKindDef[defName="DarkElvish_Ranger"]/apparelRequired</xpath>
+		<value>
+			<li>Apparel_AdvancedHelmet</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/PawnKindDef[defName="DarkElvish_Swordmaster"]/apparelRequired</xpath>
+		<value>
+			<li>Apparel_AdvancedHelmet</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/PawnKindDef[defName="DarkElvish_Archer"]/apparelRequired</xpath>
+		<value>
+			<li>Apparel_AdvancedHelmet</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/PawnKindDef[defName="DarkElvish_Spearmen"]/apparelRequired</xpath>
+		<value>
+			<li>Apparel_AdvancedHelmet</li>
 		</value>
 	</Operation>
 

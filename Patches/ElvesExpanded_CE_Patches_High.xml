@@ -348,7 +348,10 @@
 		</value>
 	</Operation>
 
-	<!-- Ranger -> Blademaster: melee + sidearm -->
+	<!-- Ranger -> Blademaster: melee + sidearm, remove forced hood -->
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/PawnKindDef[defName="HighElvish_Ranger"]/apparelRequired/li[.="Apparel_HatHood"]</xpath>
+	</Operation>
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/PawnKindDef[defName="HighElvish_Ranger"]/weaponTags</xpath>
 		<value>
@@ -619,6 +622,52 @@
 					</li>
 				</sidearms>
 			</li>
+		</value>
+	</Operation>
+
+	<!-- ==================================================================
+		FORCED HEADGEAR: flak helmet on all combat pawns
+		================================================================== -->
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/PawnKindDef[defName="HighElvish_Emperor"]/apparelRequired</xpath>
+		<value>
+			<li>Apparel_AdvancedHelmet</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/PawnKindDef[defName="HighElvish_Ranger"]/apparelRequired</xpath>
+		<value>
+			<li>Apparel_AdvancedHelmet</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/PawnKindDef[defName="HighElvish_Spearmen"]/apparelRequired</xpath>
+		<value>
+			<li>Apparel_AdvancedHelmet</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/PawnKindDef[defName="HighElvish_Swordmaster"]/apparelRequired</xpath>
+		<value>
+			<li>Apparel_AdvancedHelmet</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/PawnKindDef[defName="HighElvish_Archer"]/apparelRequired</xpath>
+		<value>
+			<li>Apparel_AdvancedHelmet</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/PawnKindDef[defName="HighElvish_HeavyArcher"]/apparelRequired</xpath>
+		<value>
+			<li>Apparel_AdvancedHelmet</li>
 		</value>
 	</Operation>
 
