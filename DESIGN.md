@@ -164,7 +164,7 @@ Line troops use standard FullMetalJacket only. Specialty ammunition is reserved 
 
 ## Implementation
 
-All changes are pure XML patches (no C#). The mod consists of a single `Patches/` file that applies `PatchOperationReplace`, `PatchOperationAdd`, `PatchOperationAddModExtension`, and `PatchOperationConditional` to the target Faction - Elves defs.
+All changes are pure XML patches (no C#). The mod consists of four faction-specific files under `Patches/` that apply `PatchOperationReplace`, `PatchOperationAdd`, `PatchOperationAddModExtension`, and `PatchOperationConditional` to the target Faction - Elves defs.
 
 CE integration uses `LoadoutPropertiesExtension` added via `PatchOperationAddModExtension` with:
 - `primaryMagazineCount`: ammo magazines carried
@@ -176,8 +176,6 @@ CE integration uses `LoadoutPropertiesExtension` added via `PatchOperationAddMod
 ## Patched Pawn Kinds
 
 ### High Elvish Kingdom
-- `HighElvish_Citizen`: CE loadout (minimal)
-- `HighElvish_Noble`: weaponTags sidearm + melee, CE loadout with shield
 - `HighElvish_Emperor`: weaponTags precision + melee, elite CE loadout
 - `HighElvish_Ranger`: label becomes "blademaster", melee + sidearm
 - `HighElvish_Spearmen`: label becomes "ranger", AR/rifle loadout
@@ -186,8 +184,6 @@ CE integration uses `LoadoutPropertiesExtension` added via `PatchOperationAddMod
 - `HighElvish_HeavyArcher`: label becomes "sharpshooter", precision loadout
 
 ### Dark Elvish Kingdom
-- `DarkElvish_Citizen`: CE loadout (minimal)
-- `DarkElvish_Noble`: weaponTags sidearm + melee, precision ammo
 - `DarkElvish_Lord`: weaponTags precision + melee, elite CE loadout
 - `DarkElvish_Ranger`: label becomes "marauder", melee + sidearm
 - `DarkElvish_Swordmaster`: label becomes "blademaster", elite melee + sidearm
@@ -207,14 +203,12 @@ Dark Elvish Spearmen keep their original label and melee role (unchanged).
 All wild elf combat kinds remain pure tribal with no firearm access.
 
 ### Celestia Elvish Empire
-- `CelestiaElvish_Citizen`: CE loadout (minimal)
-- `CelestiaElvish_Trader`: CE loadout
 - `CelestiaElvish_Council`: elite CE loadout with shield
 - `CelestiaElvish_BladeMaster`: melee + sidearm, shield
 - `CelestiaElvish_Ranger`: spacer gun loadout
 - `CelestiaElvish_Mechanitor`: spacer gun loadout
 
-No role or label changes. CE loadout plumbing only.
+CE loadout plumbing for existing spacer-tier gear.
 
 ## Future Ideas
 - Unique CE-compatible weapons (elven precision rifles, DMRs)
