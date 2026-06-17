@@ -39,12 +39,9 @@ Elves avoid:
 | `Spearmen` | spearmen | **ranger** | rifle infantry |
 | `Ranger` | swordmen | **blademaster** | melee + sidearm |
 | `HeavyArcher` | heavy archer | **sharpshooter** | precision rifle |
-| `Noble` | noble | *(unchanged)* | trader, sidearm + melee |
 | `Emperor` | emperor | *(unchanged)* | leader, precision + melee |
-| `Citizen` | citizen | *(unchanged)* | civilian |
-| `Child` | citizen | *(unchanged)* | civilian |
 
-Combat kinds: 3 ranged (scout, ranger, sharpshooter) + 1 melee (blademaster). Balanced lineup.
+Combat kinds: 3 ranged (scout, ranger, sharpshooter) + 1 melee (blademaster). Balanced lineup. Nobles and citizens are non-combat roles left as-is.
 
 ### Dark Elvish Kingdom
 
@@ -54,13 +51,10 @@ Combat kinds: 3 ranged (scout, ranger, sharpshooter) + 1 melee (blademaster). Ba
 | `Ranger` | ranger | **marauder** | melee + sidearm |
 | `Spearmen` | spearmen | *(unchanged)* | melee (polearm) |
 | `Swordmaster` | swordmaster | **blademaster** | elite melee + sidearm |
-| `Noble` | noble | *(unchanged)* | trader, sidearm + melee |
 | `Lord` | emperor | *(unchanged)* | leader, precision + melee |
 | `Reaver` | *(new)* | **reaver** | SMG + shotgun rusher |
-| `Citizen` | citizen | *(unchanged)* | civilian |
-| `Child` | citizen | *(unchanged)* | civilian |
 
-Combat kinds: 2 ranged (scout, reaver) + 3 melee (marauder, spearmen, blademaster). Melee-heavy to match their gene package, with a new CQB option.
+Combat kinds: 2 ranged (scout, reaver) + 3 melee (marauder, spearmen, blademaster). Melee-heavy to match their gene package, with a new CQB option. Nobles and citizens are non-combat roles left as-is.
 
 ### Wild Elvish Tribe
 
@@ -118,7 +112,7 @@ Already spacer-tier. CE changes are loadout plumbing only (magazine counts, shie
 - Armor: Light armor, shield
 - Ammo: FullMetalJacket (sidearm, standard issue)
 
-### Nobles/Elites -- Command and precision
+### Elites/Leaders -- Command and precision
 - Weapons: Precision rifle + melee
 - Armor: High-quality ceremonial armor, shield
 - Ammo: ArmorPiercing, HollowPoint, IncendiaryAP (specialist only)
@@ -135,9 +129,9 @@ Heavy machine guns (`CE_MachineGun`) and launchers are excluded from all elven c
 
 Note: `CE_AI_AR` matches both AssaultRifle and ChargeRifle in CE (ChargeRifle has `CE_AI_AR` + `AdvancedGun` tags). Rangers with this tag may occasionally spawn with charge rifles if weapon money overlaps. This is intentional since charge rifles fit the elven precision theme.
 
-Ranged units (scouts, rangers, sharpshooters) have their required helmet upgraded from `Apparel_SimpleHelmet` (medieval pot helmet) to `Apparel_ArmorHelmet` (flak helmet) for better ballistic protection under CE.
+Ranged units use weighted alternate tag choices for headgear (60% basic / 40% advanced military pool), giving budget-driven variety from steel pots to composite helmets.
 
-Note: Dark Elves have no rifleman line (ranger) or dedicated sharpshooter. Their gene package (Remarkable Melee, Strong Melee Damage, Aggressive) favors close-quarters combat. Their ranged capability comes from a single scout kind and elite nobles with precision rifles.
+Note: Dark Elves have no rifleman line (ranger) or dedicated sharpshooter. Their gene package (Remarkable Melee, Strong Melee Damage, Aggressive) favors close-quarters combat. Their ranged capability comes from the scout and reaver kinds, with the Lord providing precision support.
 
 ## Faction Identity Changes
 
@@ -157,7 +151,6 @@ Note: Dark Elves have no rifleman line (ranger) or dedicated sharpshooter. Their
 | Marauder | FullMetalJacket (sidearm) | none |
 | Blademaster | FullMetalJacket (sidearm) | none |
 | Sharpshooter | none | HollowPoint, ArmorPiercing, IncendiaryAP |
-| Noble | FullMetalJacket | ArmorPiercing, HollowPoint, IncendiaryAP |
 | Emperor/Lord | FullMetalJacket | ArmorPiercing, HollowPoint, IncendiaryAP |
 | Councilor | FullMetalJacket | ArmorPiercing, HollowPoint, IncendiaryAP, ExplosiveAP |
 
