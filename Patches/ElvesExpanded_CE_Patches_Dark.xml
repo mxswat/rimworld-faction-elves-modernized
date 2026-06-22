@@ -348,7 +348,7 @@
 				<shieldTags>
 					<li>OutlanderShield</li>
 				</shieldTags>
-				<shieldChance>0.7</shieldChance>
+				<shieldChance>0.8</shieldChance>
 				<forcedSidearm>
 					<sidearmMoney>
 						<min>80</min>
