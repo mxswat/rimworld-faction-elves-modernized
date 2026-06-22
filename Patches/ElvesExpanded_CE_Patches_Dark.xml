@@ -362,6 +362,22 @@
 						<max>4</max>
 					</magazineCount>
 				</forcedSidearm>
+				<sidearms>
+					<li>
+						<generateChance>0.5</generateChance>
+						<sidearmMoney>
+							<min>80</min>
+							<max>160</max>
+						</sidearmMoney>
+						<weaponTags>
+							<li>GrenadeSmoke</li>
+						</weaponTags>
+						<magazineCount>
+							<min>1</min>
+							<max>3</max>
+						</magazineCount>
+					</li>
+				</sidearms>
 			</li>
 		</value>
 	</Operation>
@@ -393,6 +409,22 @@
 						<max>4</max>
 					</magazineCount>
 				</forcedSidearm>
+				<sidearms>
+					<li>
+						<generateChance>0.5</generateChance>
+						<sidearmMoney>
+							<min>80</min>
+							<max>160</max>
+						</sidearmMoney>
+						<weaponTags>
+							<li>GrenadeSmoke</li>
+						</weaponTags>
+						<magazineCount>
+							<min>1</min>
+							<max>3</max>
+						</magazineCount>
+					</li>
+				</sidearms>
 			</li>
 		</value>
 	</Operation>
@@ -469,6 +501,22 @@
 			<li>BeltDefense</li>
 				</shieldTags>
 				<shieldChance>0.3</shieldChance>
+				<sidearms>
+					<li>
+						<generateChance>0.5</generateChance>
+						<sidearmMoney>
+							<min>80</min>
+							<max>160</max>
+						</sidearmMoney>
+						<weaponTags>
+							<li>GrenadeSmoke</li>
+						</weaponTags>
+						<magazineCount>
+							<min>1</min>
+							<max>3</max>
+						</magazineCount>
+					</li>
+				</sidearms>
 			</li>
 		</value>
 	</Operation>
