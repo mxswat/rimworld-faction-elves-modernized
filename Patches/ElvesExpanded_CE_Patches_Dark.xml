@@ -147,18 +147,16 @@
 		</value>
 	</Operation>
 
-	<!-- DarkElvish_Ranger (marauder): remove forced war veil, disallow fancy headgear, add ballistic shield -->
-	<Operation Class="PatchOperationRemove">
-		<xpath>Defs/PawnKindDef[defName="DarkElvish_Ranger"]/apparelRequired/li[.="Apparel_WarVeil"]</xpath>
+	<!-- DarkElvish_Ranger (marauder): remove forced war veil, add ballistic shield via requiredTag -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/PawnKindDef[defName="DarkElvish_Ranger"]/apparelRequired</xpath>
+		<value>
+			<apparelRequired>
+			</apparelRequired>
+		</value>
 	</Operation>
 	<Operation Class="PatchOperationRemove">
 		<xpath>Defs/PawnKindDef[defName="DarkElvish_Ranger"]/specificApparelRequirements/li[bodyPartGroup="FullHead"]</xpath>
-	</Operation>
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/PawnKindDef[defName="DarkElvish_Ranger"]/apparelRequired</xpath>
-		<value>
-			<li>CE_Apparel_BallisticShield</li>
-		</value>
 	</Operation>
 	<Operation Class="PatchOperationConditional">
 		<xpath>Defs/PawnKindDef[defName="DarkElvish_Ranger"]/apparelDisallowTags</xpath>
@@ -312,6 +310,7 @@
 		<value>
 			<weaponTags>
 				<li>MedievalMeleeAdvanced</li>
+				<li>CE_OneHandedWeapon</li>
 			</weaponTags>
 		</value>
 	</Operation>
@@ -342,6 +341,14 @@
 		<xpath>Defs/PawnKindDef[defName="DarkElvish_Ranger"]</xpath>
 		<value>
 			<li Class="CombatExtended.LoadoutPropertiesExtension">
+				<shieldMoney>
+					<min>500</min>
+					<max>1000</max>
+				</shieldMoney>
+				<shieldTags>
+					<li>OutlanderShield</li>
+				</shieldTags>
+				<shieldChance>0.7</shieldChance>
 				<forcedSidearm>
 					<sidearmMoney>
 						<min>80</min>
