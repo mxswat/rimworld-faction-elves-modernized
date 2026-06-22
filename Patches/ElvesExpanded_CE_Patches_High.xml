@@ -462,8 +462,8 @@
 		<xpath>Defs/PawnKindDef[defName="HighElvish_Spearmen"]/weaponMoney</xpath>
 		<value>
 			<weaponMoney>
-				<min>400</min>
-				<max>900</max>
+				<min>300</min>
+				<max>650</max>
 			</weaponMoney>
 		</value>
 	</Operation>
@@ -622,8 +622,8 @@
 		<xpath>Defs/PawnKindDef[defName="HighElvish_HeavyArcher"]/weaponMoney</xpath>
 		<value>
 			<weaponMoney>
-				<min>600</min>
-				<max>1400</max>
+				<min>800</min>
+				<max>1600</max>
 			</weaponMoney>
 		</value>
 	</Operation>
