@@ -147,12 +147,18 @@
 		</value>
 	</Operation>
 
-	<!-- DarkElvish_Ranger (marauder): remove forced war veil, disallow fancy headgear -->
+	<!-- DarkElvish_Ranger (marauder): remove forced war veil, disallow fancy headgear, add ballistic shield -->
 	<Operation Class="PatchOperationRemove">
 		<xpath>Defs/PawnKindDef[defName="DarkElvish_Ranger"]/apparelRequired/li[.="Apparel_WarVeil"]</xpath>
 	</Operation>
 	<Operation Class="PatchOperationRemove">
 		<xpath>Defs/PawnKindDef[defName="DarkElvish_Ranger"]/specificApparelRequirements/li[bodyPartGroup="FullHead"]</xpath>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/PawnKindDef[defName="DarkElvish_Ranger"]/apparelRequired</xpath>
+		<value>
+			<li>CE_Apparel_BallisticShield</li>
+		</value>
 	</Operation>
 	<Operation Class="PatchOperationConditional">
 		<xpath>Defs/PawnKindDef[defName="DarkElvish_Ranger"]/apparelDisallowTags</xpath>
@@ -336,15 +342,6 @@
 		<xpath>Defs/PawnKindDef[defName="DarkElvish_Ranger"]</xpath>
 		<value>
 			<li Class="CombatExtended.LoadoutPropertiesExtension">
-				<shieldMoney>
-					<min>200</min>
-					<max>400</max>
-				</shieldMoney>
-				<shieldTags>
-					<li>OutlanderShield</li>
-			<li>BeltDefense</li>
-				</shieldTags>
-				<shieldChance>0.4</shieldChance>
 				<forcedSidearm>
 					<sidearmMoney>
 						<min>80</min>
