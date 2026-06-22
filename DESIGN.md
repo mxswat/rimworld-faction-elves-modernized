@@ -35,7 +35,7 @@ Elves avoid:
 
 | defName | Old Label | New Label | CE Role |
 |---------|-----------|-----------|---------|
-| `Archer` | archer | **scout** | SMG skirmisher |
+| `Archer` | archer | **scout** | assault rifle |
 | `Spearmen` | spearmen | **ranger** | rifle infantry |
 | `Ranger` | swordmen | **blademaster** | melee + sidearm |
 | `HeavyArcher` | heavy archer | **sharpshooter** | precision rifle |
@@ -47,7 +47,7 @@ Combat kinds: 3 ranged (scout, ranger, sharpshooter) + 1 melee (blademaster). Ba
 
 | defName | Old Label | New Label | CE Role |
 |---------|-----------|-----------|---------|
-| `Archer` | archer | **scout** | SMG skirmisher |
+| `Archer` | archer | **scout** | SMG |
 | `Ranger` | ranger | **marauder** | melee + sidearm |
 | `Spearmen` | spearmen | *(unchanged)* | melee (polearm) |
 | `Swordmaster` | swordmaster | **blademaster** | elite melee + sidearm |
@@ -90,13 +90,14 @@ Already spacer-tier. CE changes are loadout plumbing only (magazine counts, shie
 ## Loadout Philosophy
 
 ### Scouts -- Reconnaissance and skirmishing
-- Weapons: SMG, sidearm, light rifle
+- Weapons: SMG (Dark Elf) or assault rifle (High Elf)
 - Armor: Light armor, cloaks
 - Ammo: FullMetalJacket (standard issue)
 - Magazines: 3 to 6
+- Sidearm: Forced melee knife
 
 ### Rangers -- General infantry
-- Weapons: Assault rifle, bolt-action rifle, hunting rifle
+- Weapons: Assault rifle, charge rifle
 - Armor: Medium armor
 - Ammo: FullMetalJacket (standard issue)
 - Magazines: 3 to 5
@@ -106,6 +107,14 @@ Already spacer-tier. CE changes are loadout plumbing only (magazine counts, shie
 - Armor: Light armor, recon gear
 - Ammo: HollowPoint, ArmorPiercing, IncendiaryAP (specialist only)
 - Magazines: 3 to 5
+
+### Reavers -- Close quarters
+- Weapons: SMG + shotgun
+- Armor: Flak vest, devilstrand hood, no helmet
+- Ammo: FullMetalJacket, buckshot
+- Magazines: 3 to 5
+- Sidearm: Melee knife (50% chance)
+- Shield: Energy or ballistic (30% chance)
 
 ### Blademasters -- Close assault
 - Weapons: Elven saber (melee) + sidearm
@@ -120,9 +129,9 @@ Already spacer-tier. CE changes are loadout plumbing only (magazine counts, shie
 
 ## Weapon Tags Preference Order
 1. Precision rifles (`CE_AI_SR`)
-2. Hunting rifles (`SimpleGun`, `CE_AI_SR`)
-3. Carbines (`CE_SMG`)
-4. Assault rifles (`CE_AI_AR`)
+2. Assault rifles (`CE_AI_AR`)
+3. Shotguns (`ElvesExpanded_Shotgun`)
+4. Carbines (`CE_SMG`)
 5. Sidearms (`CE_Sidearm`, `CE_Sidearm_Melee`)
 
 Heavy machine guns (`CE_MachineGun`) and launchers are excluded from all elven combat pawn kinds.
@@ -151,6 +160,7 @@ Note: Dark Elves have no rifleman line (ranger) or dedicated sharpshooter. Their
 | Marauder | FullMetalJacket (sidearm) | none |
 | Blademaster | FullMetalJacket (sidearm) | none |
 | Sharpshooter | none | HollowPoint, ArmorPiercing, IncendiaryAP |
+| Reaver | FullMetalJacket (SMG), Buckshot (shotgun) | none |
 | Emperor/Lord | FullMetalJacket | ArmorPiercing, HollowPoint, IncendiaryAP |
 | Councilor | FullMetalJacket | ArmorPiercing, HollowPoint, IncendiaryAP, ExplosiveAP |
 
@@ -174,7 +184,7 @@ CE integration uses `LoadoutPropertiesExtension` added via `PatchOperationAddMod
 - `HighElvish_Ranger`: label becomes "blademaster", melee + sidearm
 - `HighElvish_Spearmen`: label becomes "ranger", AR/rifle loadout
 - `HighElvish_Swordmaster`: melee + sidearm
-- `HighElvish_Archer`: label becomes "scout", SMG loadout
+- `HighElvish_Archer`: label becomes "scout", assault rifle loadout
 - `HighElvish_HeavyArcher`: label becomes "sharpshooter", precision loadout
 
 ### Dark Elvish Kingdom
