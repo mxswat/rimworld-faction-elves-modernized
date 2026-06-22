@@ -257,6 +257,7 @@ All wild elf combat kinds remain pure tribal with no firearm access.
 CE loadout plumbing for existing spacer-tier gear.
 
 ## Future Ideas
+- Rename mod from `Elves Expanded - CE` to `Faction - Elves - Modernized`
 - Unique CE-compatible weapons (elven precision rifles, DMRs)
 - Elven marksman armor with camo variants
 - Recon units with cloaking
