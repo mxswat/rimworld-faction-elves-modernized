@@ -97,33 +97,47 @@ Already spacer-tier. CE changes are loadout plumbing only (magazine counts, shie
 - Sidearm: Forced melee knife
 
 ### Rangers -- General infantry
-- Weapons: Assault rifle, charge rifle
+- Weapons: Assault rifle
 - Armor: Medium armor
 - Ammo: FullMetalJacket (standard issue)
 - Magazines: 3 to 5
+- Budget: 300-650 (prices out most charge rifles)
 
 ### Sharpshooters -- Precision marksmen
 - Weapons: Sniper rifle, precision rifle, DMR
 - Armor: Light armor, recon gear
 - Ammo: HollowPoint, ArmorPiercing, IncendiaryAP (specialist only)
 - Magazines: 3 to 5
+- Budget: 800-1600 (ensures proper snipers are reachable)
 
 ### Reavers -- Close quarters
-- Weapons: SMG + shotgun
+- Weapons: SMG + shotgun (via `ElvesExpanded_Shotgun` tag)
 - Armor: Flak vest, devilstrand hood, no helmet
 - Ammo: FullMetalJacket, buckshot
 - Magazines: 3 to 5
 - Sidearm: Melee knife (50% chance)
-- Shield: Energy or ballistic (30% chance)
+- Smoke grenades: 50% chance, 1-3 shots
 
-### Blademasters -- Close assault
-- Weapons: Elven saber (melee) + sidearm
-- Armor: Light armor, shield
-- Ammo: FullMetalJacket (sidearm, standard issue)
+### Marauders -- Shield tank
+- Weapons: One-handed melee (knife, club, mace, gladius, ikwa) + forced pistol
+- Armor: Flak vest, ballistic shield (80% chance)
+- Ammo: FullMetalJacket (pistol)
+- Smoke grenades: 50% chance, 1-3 shots
+
+### Blademasters -- Elite melee
+- Weapons: Medieval melee + forced pistol
+- Armor: Light armor, ballistic or energy shield (60% chance)
+- Ammo: FullMetalJacket (pistol)
+- Smoke grenades: 50% chance, 1-3 shots
+
+### Spearmen -- Polearm melee
+- Weapons: Polearm, spear
+- Armor: Light armor, energy or ballistic shield (30% chance)
+- Smoke grenades: 50% chance, 1-3 shots
 
 ### Elites/Leaders -- Command and precision
 - Weapons: Precision rifle + melee
-- Armor: High-quality ceremonial armor, shield
+- Armor: High-quality ceremonial armor, ballistic shield (60%)
 - Ammo: ArmorPiercing, HollowPoint, IncendiaryAP (specialist only)
 - Magazines: 4 to 8
 
@@ -136,7 +150,7 @@ Already spacer-tier. CE changes are loadout plumbing only (magazine counts, shie
 
 Heavy machine guns (`CE_MachineGun`) and launchers are excluded from all elven combat pawn kinds.
 
-Note: `CE_AI_AR` matches both AssaultRifle and ChargeRifle in CE (ChargeRifle has `CE_AI_AR` + `AdvancedGun` tags). Rangers with this tag may occasionally spawn with charge rifles if weapon money overlaps. This is intentional since charge rifles fit the elven precision theme.
+Note: `CE_AI_AR` matches both AssaultRifle and ChargeRifle in CE (ChargeRifle has `CE_AI_AR` + `AdvancedGun` tags). Rangers with this tag may occasionally spawn with charge rifles if weapon money overlaps. The ranger budget was lowered to 300-650 to reduce charge rifle frequency while keeping assault rifles affordable. The scout budget is 400-700 with `CE_AI_AR` only, meaning they share the assault rifle pool with rangers at a lower tier.
 
 Ranged units use weighted alternate tag choices for headgear (60% basic / 40% advanced military pool), giving budget-driven variety from steel pots to composite helmets.
 
@@ -175,7 +189,10 @@ CE integration uses `LoadoutPropertiesExtension` added via `PatchOperationAddMod
 - `weightedAmmoCategories`: ammo type preferences (HollowPoint, FullMetalJacket, ArmorPiercing, IncendiaryAP)
 - `minAmmoCount`: minimum loose ammo
 - `shieldMoney`, `shieldTags`, `shieldChance`: personal shields
-- `forcedSidearm`, `sidearms`: backup weapons
+- `forcedSidearm`, `sidearms`: backup weapons (pistols, melee, smoke grenades)
+
+Custom tags created for this mod:
+- `ElvesExpanded_Shotgun`: added to all shotguns via defName-based xpath; used by reavers to pull only shotguns without CE_AI_BROOM's pistol contamination
 
 ## Patched Pawn Kinds
 
