@@ -41,11 +41,11 @@
 		<apparelMoney>400~700</apparelMoney>
 		<weaponTags>
 			<li>CE_SMG</li>
-			<li>CE_AI_BROOM</li>
+			<li>ElvesExpanded_Shotgun</li>
 		</weaponTags>
 		<weaponMoney>
-			<min>250</min>
-			<max>500</max>
+			<min>350</min>
+			<max>600</max>
 		</weaponMoney>
 		<skills>
 			<li>

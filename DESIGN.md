@@ -186,6 +186,25 @@ CE integration uses `LoadoutPropertiesExtension` added via `PatchOperationAddMod
 
 Dark Elvish Spearmen keep their original label and melee role (unchanged).
 
+### Shotgun Tag Solution (5 WHYs)
+
+The reaver uses a custom tag `ElvesExpanded_Shotgun` instead of CE's `CE_AI_BROOM` for shotguns. Here is why:
+
+1. **Why were reavers spawning with handguns?**
+   Because `CE_AI_BROOM` is CE's catch-all close-quarters tag -- it matches shotguns, handguns, revolvers, and SMGs together.
+
+2. **Why does CE_AI_BROOM include handguns?**
+   CE designed it as a single pool for every short-range weapon. There is no shotgun-only tag in CE.
+
+3. **Why couldn't budget fix it?**
+   RimWorld's weapon generator picks by weighted random from all weapons within budget. Once budget covers shotguns (~200 silver), all handguns (~70 silver) fit too. The odds are fixed at about 23% handgun regardless of budget size.
+
+4. **Why not patch CE items?**
+   Modifying third-party tags creates hidden dependencies -- patches can break on CE updates, affect other mods, and are fragile. Our rule: never patch CE or workshop mod items without explicit authorization.
+
+5. **Why does a custom tag work?**
+   `ElvesExpanded_Shotgun` is added to every shotgun across all installed mods via a single xpath that matches defNames containing `Shotgun`, `TrenchGun`, `USAS`, or `Saiga`. Zero handguns match. The reaver uses this tag instead of `CE_AI_BROOM`, pulling only shotguns. No CE tags are removed or modified -- only added to, which is safe.
+
 ### Wild Elvish Tribe
 - `WildElvish_warrior`: CE loadout with shield (unchanged role)
 - `WildElvish_Swordkins`: TribalShield

@@ -454,7 +454,6 @@
 			<weaponTags>
 				<li>CE_AI_AR</li>
 				<li>CE_AI_SR</li>
-				<li>SimpleGun</li>
 			</weaponTags>
 		</value>
 	</Operation>
@@ -553,10 +552,7 @@
 		<xpath>Defs/PawnKindDef[defName="HighElvish_Archer"]/weaponTags</xpath>
 		<value>
 			<weaponTags>
-				<li>CE_SMG</li>
 				<li>CE_AI_AR</li>
-				<li>CE_Sidearm</li>
-				<li>SimpleGun</li>
 			</weaponTags>
 		</value>
 	</Operation>
@@ -565,8 +561,8 @@
 		<xpath>Defs/PawnKindDef[defName="HighElvish_Archer"]/weaponMoney</xpath>
 		<value>
 			<weaponMoney>
-				<min>250</min>
-				<max>500</max>
+				<min>400</min>
+				<max>700</max>
 			</weaponMoney>
 		</value>
 	</Operation>

@@ -342,6 +342,7 @@
 				</shieldMoney>
 				<shieldTags>
 					<li>OutlanderShield</li>
+			<li>BeltDefense</li>
 				</shieldTags>
 				<shieldChance>0.4</shieldChance>
 				<forcedSidearm>
@@ -372,6 +373,7 @@
 				</shieldMoney>
 				<shieldTags>
 					<li>OutlanderShield</li>
+			<li>BeltDefense</li>
 				</shieldTags>
 				<shieldChance>0.6</shieldChance>
 				<forcedSidearm>
@@ -397,9 +399,6 @@
 		<value>
 			<weaponTags>
 				<li>CE_SMG</li>
-				<li>CE_AI_AR</li>
-				<li>CE_Sidearm</li>
-				<li>SimpleGun</li>
 			</weaponTags>
 		</value>
 	</Operation>
@@ -408,8 +407,8 @@
 		<xpath>Defs/PawnKindDef[defName="DarkElvish_Archer"]/weaponMoney</xpath>
 		<value>
 			<weaponMoney>
-				<min>250</min>
-				<max>500</max>
+				<min>300</min>
+				<max>550</max>
 			</weaponMoney>
 		</value>
 	</Operation>
@@ -439,21 +438,48 @@
 					<max>6</max>
 				</primaryMagazineCount>
 				<minAmmoCount>20</minAmmoCount>
-				<sidearms>
-					<li>
-						<generateChance>0.5</generateChance>
-						<sidearmMoney>
-							<min>20</min>
-							<max>100</max>
-						</sidearmMoney>
-						<weaponTags>
-							<li>CE_Sidearm_Melee</li>
-						</weaponTags>
-					</li>
-				</sidearms>
+				<forcedSidearm>
+					<sidearmMoney>
+						<min>20</min>
+						<max>100</max>
+					</sidearmMoney>
+					<weaponTags>
+						<li>CE_Sidearm_Melee</li>
+					</weaponTags>
+				</forcedSidearm>
 			</li>
 		</value>
 	</Operation>
+
+	<!-- Spearmen: add low-shield pack -->
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/PawnKindDef[defName="DarkElvish_Spearmen"]</xpath>
+		<value>
+			<li Class="CombatExtended.LoadoutPropertiesExtension">
+				<shieldMoney>
+					<min>150</min>
+					<max>300</max>
+				</shieldMoney>
+				<shieldTags>
+					<li>OutlanderShield</li>
+			<li>BeltDefense</li>
+				</shieldTags>
+				<shieldChance>0.3</shieldChance>
+			</li>
+		</value>
+	</Operation>
+
+	<!-- Scatter the ElvesExpanded_Shotgun tag onto every weapon whose defName identifies it as a shotgun -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[contains(defName, 'Shotgun') or contains(defName, 'shotgun') or contains(defName, 'TrenchGun') or contains(defName, 'USAS') or contains(defName, 'Saiga')]/weaponTags</xpath>
+		<value>
+			<li>ElvesExpanded_Shotgun</li>
+		</value>
+	</Operation>
+
+	<!-- ==================================================================
+		HEADGEAR REQUIREMENTS: military helmet via requiredTag
+		================================================================== -->
 
 	<!-- ==================================================================
 		HEADGEAR REQUIREMENTS: military helmet via requiredTag
