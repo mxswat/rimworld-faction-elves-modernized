@@ -126,8 +126,13 @@ Already spacer-tier. CE changes are loadout plumbing only (magazine counts, shie
 
 ### Blademasters -- Elite melee
 - Weapons: Medieval melee + forced pistol
-- Armor: Light armor, ballistic or energy shield (60% chance)
+- Armor: Light armor, ballistic or energy shield (60% Dark Elf / 40% High Elf)
 - Ammo: FullMetalJacket (pistol)
+- Smoke grenades: 50% chance, 1-3 shots
+
+### Swordmasters (High Elf) -- Elite melee
+- Weapons: Medieval melee + forced pistol
+- Armor: Light armor, ballistic or energy shield (60%)
 - Smoke grenades: 50% chance, 1-3 shots
 
 ### Spearmen -- Polearm melee
@@ -137,7 +142,7 @@ Already spacer-tier. CE changes are loadout plumbing only (magazine counts, shie
 
 ### Elites/Leaders -- Command and precision
 - Weapons: Precision rifle + melee
-- Armor: High-quality ceremonial armor, ballistic shield (60%)
+- Armor: High-quality ceremonial armor, ballistic or energy shield (60%)
 - Ammo: ArmorPiercing, HollowPoint, IncendiaryAP (specialist only)
 - Magazines: 4 to 8
 
