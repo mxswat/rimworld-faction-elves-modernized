@@ -43,6 +43,25 @@
 		</value>
 	</Operation>
 
+	<!-- Councilor: ban gas masks (breaks the spacer aesthetic) -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/PawnKindDef[defName="CelestiaElvish_Council"]/apparelDisallowTags</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/PawnKindDef[defName="CelestiaElvish_Council"]/apparelDisallowTags</xpath>
+			<value>
+				<li>GasMask</li>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/PawnKindDef[defName="CelestiaElvish_Council"]</xpath>
+			<value>
+				<apparelDisallowTags>
+					<li>GasMask</li>
+				</apparelDisallowTags>
+			</value>
+		</nomatch>
+	</Operation>
+
 	<!-- BladeMaster: melee + sidearm -->
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/PawnKindDef[defName="CelestiaElvish_BladeMaster"]/weaponTags</xpath>
