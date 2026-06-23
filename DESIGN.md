@@ -126,10 +126,10 @@ Already spacer-tier. CE changes are loadout plumbing only (magazine counts, shie
 - Smoke grenades: 50% chance, 1-3 shots
 
 ### Wardens (High Elf) -- Frontline support
-- Weapons: Pistol + smoke grenade launcher
-- Armor: Light armor, ballistic or energy shield (100% chance)
-- Ammo: FullMetalJacket (pistol), smoke shells
-- Role: Provides smoke cover and shields for the squad
+- Weapons: Smoke launcher/grenades (primary), forced pistol (sidearm)
+- Armor: Light armor, energy shield (100% chance)
+- Ammo: Smoke shells (primary), FullMetalJacket (pistol)
+- Role: Provides smoke cover and close defense for the squad
 
 ### Swordmasters (High Elf) -- Elite melee
 - Weapons: Medieval melee + forced pistol

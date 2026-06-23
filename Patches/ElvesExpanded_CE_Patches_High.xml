@@ -413,7 +413,6 @@
 		<xpath>Defs/PawnKindDef[defName="HighElvish_Ranger"]/weaponTags</xpath>
 		<value>
 			<weaponTags>
-				<li>CE_Sidearm</li>
 				<li>CE_AI_SMOKE</li>
 			</weaponTags>
 		</value>
@@ -433,6 +432,13 @@
 		<xpath>Defs/PawnKindDef[defName="HighElvish_Ranger"]</xpath>
 		<value>
 			<li Class="CombatExtended.LoadoutPropertiesExtension">
+				<primaryMagazineCount>
+					<min>3</min>
+					<max>5</max>
+				</primaryMagazineCount>
+				<weightedAmmoCategories>
+					<Smoke>1.0</Smoke>
+				</weightedAmmoCategories>
 				<shieldMoney>
 					<min>600</min>
 					<max>1200</max>
@@ -443,11 +449,11 @@
 				<shieldChance>1.0</shieldChance>
 				<forcedSidearm>
 					<sidearmMoney>
-						<min>60</min>
-						<max>120</max>
+						<min>100</min>
+						<max>300</max>
 					</sidearmMoney>
 					<weaponTags>
-						<li>GrenadeSmoke</li>
+						<li>CE_Sidearm</li>
 					</weaponTags>
 					<magazineCount>
 						<min>2</min>
