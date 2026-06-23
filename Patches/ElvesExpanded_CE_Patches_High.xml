@@ -438,7 +438,6 @@
 					<max>1200</max>
 				</shieldMoney>
 				<shieldTags>
-					<li>OutlanderShield</li>
 					<li>BeltDefense</li>
 				</shieldTags>
 				<shieldChance>1.0</shieldChance>
