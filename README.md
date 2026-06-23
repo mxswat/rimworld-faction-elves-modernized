@@ -237,9 +237,9 @@ The reaver uses a custom tag `ElvesExpanded_Shotgun` instead of CE's `CE_AI_BROO
    Modifying third-party tags creates hidden dependencies - patches can break on CE updates, affect other mods, and are fragile. Our rule: never patch CE or workshop mod items without explicit authorization.
 
 5. **Why does a custom tag work?**
-   `ElvesExpanded_Shotgun` is added to every shotgun via an xpath that matches weapons chambered in 12 gauge (`AmmoSet_12Gauge`). Only actual shotguns use this ammunition — no pistols, no revolvers. The reaver uses this tag instead of `CE_AI_BROOM`, pulling only shotguns. No CE tags are removed or modified — only added to, which is safe.
+   `ElvesExpanded_Shotgun` is added to every shotgun via an xpath that matches weapons chambered in 12 gauge (`AmmoSet_12Gauge`). Only actual shotguns use this ammunition, no pistols, no revolvers. The reaver uses this tag instead of `CE_AI_BROOM`, pulling only shotguns. No CE tags are removed or modified, only added to, which is safe.
 
-   > **How it was first done:** The tag was originally scattered using defName-based xpath matching (`contains(defName, 'Shotgun')` etc.). This worked but relied on weapon naming conventions across mods. It was replaced by the calibre-based approach (`comps/li[@Class="CombatExtended.CompProperties_AmmoUser"][ammoSet="AmmoSet_12Gauge"]`) which matches the actual ammunition type — precise regardless of weapon name.
+   > **How it was first done:** The tag was originally scattered using defName-based xpath matching (`contains(defName, 'Shotgun')` etc.). This worked but relied on weapon naming conventions across mods. It was replaced by the calibre-based approach (`comps/li[@Class="CombatExtended.CompProperties_AmmoUser"][ammoSet="AmmoSet_12Gauge"]`) which matches the actual ammunition type, precise regardless of weapon name.
 
 ### Wild Elvish Tribe
 - `WildElvish_warrior`: CE loadout with shield (unchanged role)
