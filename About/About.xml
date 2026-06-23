@@ -12,7 +12,9 @@ Elves are reimagined as disciplined marksmen and skirmishers who have embraced m
 - Dark Elvish Kingdom: upgraded to Industrial - SMG scouts, shotgun reavers, shield-wielding marauders, and melee blademasters
 - Wild Elvish Tribe: tribal shields and arrow magazines (CE-only)
 - Celestia Elvish Empire: spacer-tier loadout support
-- Full CE integration with LoadoutPropertiesExtension, ammo preferences, shields, smoke grenades, and forced sidearms</description>
+- Full CE integration with LoadoutPropertiesExtension, ammo preferences, shields, smoke grenades, and forced sidearms
+
+Source code: https://github.com/mxswat/rimworld-faction-elves-modernized</description>
 	<supportedVersions>
 		<li>1.6</li>
 	</supportedVersions>
