@@ -198,7 +198,7 @@ CE integration uses `LoadoutPropertiesExtension` added via `PatchOperationAddMod
 - `forcedSidearm`, `sidearms`: backup weapons (pistols, melee, smoke grenades)
 
 Custom tags created for this mod:
-- `ElvesExpanded_Shotgun`: added to all shotguns via defName-based xpath; used by reavers to pull only shotguns without CE_AI_BROOM's pistol contamination
+- `ElvesExpanded_Shotgun`: added to all shotguns via calibre xpath (`AmmoSet_12Gauge`); used by reavers to pull only shotguns without CE_AI_BROOM's pistol contamination. Originally deployed via defName matching but upgraded to calibre-based for precision.
 - `ElvesExpanded_AssaultRifle`: added to Gun_AssaultRifle (M16A4 in CE Guns); scout tag for a single, clean assault rifle with no flintlock contamination
 
 ## Patched Pawn Kinds
@@ -237,7 +237,9 @@ The reaver uses a custom tag `ElvesExpanded_Shotgun` instead of CE's `CE_AI_BROO
    Modifying third-party tags creates hidden dependencies -- patches can break on CE updates, affect other mods, and are fragile. Our rule: never patch CE or workshop mod items without explicit authorization.
 
 5. **Why does a custom tag work?**
-   `ElvesExpanded_Shotgun` is added to every shotgun across all installed mods via a single xpath that matches defNames containing `Shotgun`, `TrenchGun`, `USAS`, or `Saiga`. Zero handguns match. The reaver uses this tag instead of `CE_AI_BROOM`, pulling only shotguns. No CE tags are removed or modified -- only added to, which is safe.
+   `ElvesExpanded_Shotgun` is added to every shotgun via an xpath that matches weapons chambered in 12 gauge (`AmmoSet_12Gauge`). Only actual shotguns use this ammunition — no pistols, no revolvers. The reaver uses this tag instead of `CE_AI_BROOM`, pulling only shotguns. No CE tags are removed or modified — only added to, which is safe.
+
+   > **How it was first done:** The tag was originally scattered using defName-based xpath matching (`contains(defName, 'Shotgun')` etc.). This worked but relied on weapon naming conventions across mods. It was replaced by the calibre-based approach (`comps/li[@Class="CombatExtended.CompProperties_AmmoUser"][ammoSet="AmmoSet_12Gauge"]`) which matches the actual ammunition type — precise regardless of weapon name.
 
 ### Wild Elvish Tribe
 - `WildElvish_warrior`: CE loadout with shield (unchanged role)

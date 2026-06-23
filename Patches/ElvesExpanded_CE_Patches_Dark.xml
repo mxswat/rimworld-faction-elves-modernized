@@ -152,6 +152,7 @@
 		<xpath>Defs/PawnKindDef[defName="DarkElvish_Ranger"]/apparelRequired</xpath>
 		<value>
 			<apparelRequired>
+				<li>CE_Apparel_BallisticShield</li>
 			</apparelRequired>
 		</value>
 	</Operation>
@@ -340,14 +341,6 @@
 		<xpath>Defs/PawnKindDef[defName="DarkElvish_Ranger"]</xpath>
 		<value>
 			<li Class="CombatExtended.LoadoutPropertiesExtension">
-				<shieldMoney>
-					<min>500</min>
-					<max>1000</max>
-				</shieldMoney>
-				<shieldTags>
-					<li>OutlanderShield</li>
-				</shieldTags>
-				<shieldChance>1.0</shieldChance>
 				<forcedSidearm>
 				<sidearmMoney>
 					<min>60</min>
@@ -520,9 +513,9 @@
 		</value>
 	</Operation>
 
-	<!-- Scatter the ElvesExpanded_Shotgun tag onto every weapon whose defName identifies it as a shotgun -->
+	<!-- Scatter the ElvesExpanded_Shotgun tag onto every weapon chambered in 12 gauge -->
 	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[contains(defName, 'Shotgun') or contains(defName, 'shotgun') or contains(defName, 'TrenchGun') or contains(defName, 'USAS') or contains(defName, 'Saiga')]/weaponTags</xpath>
+		<xpath>Defs/ThingDef[comps/li[@Class="CombatExtended.CompProperties_AmmoUser"][ammoSet="AmmoSet_12Gauge"]]/weaponTags</xpath>
 		<value>
 			<li>ElvesExpanded_Shotgun</li>
 		</value>
