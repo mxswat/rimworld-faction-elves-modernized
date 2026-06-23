@@ -413,7 +413,7 @@
 		<xpath>Defs/PawnKindDef[defName="HighElvish_Ranger"]/weaponTags</xpath>
 		<value>
 			<weaponTags>
-				<li>CE_AI_SMOKE</li>
+				<li>ElvesExpanded_40mmSmokeLauncher</li>
 			</weaponTags>
 		</value>
 	</Operation>
@@ -710,6 +710,14 @@
 					</li>
 				</sidearms>
 			</li>
+		</value>
+	</Operation>
+
+	<!-- Scatter the 40mm smoke launcher tag onto weapons by ammo set -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[comps/li[@Class="CombatExtended.CompProperties_AmmoUser"]/ammoSet="AmmoSet_40x46mmGrenade"]/weaponTags</xpath>
+		<value>
+			<li>ElvesExpanded_40mmSmokeLauncher</li>
 		</value>
 	</Operation>
 
