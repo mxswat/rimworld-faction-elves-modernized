@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
 	<name>Faction - Elves - Modernized</name>
-	<author>opencode</author>
-	<packageId>rimword.FactionElvesModernized</packageId>
+	<author>Mxswat</author>
+	<modIconPath IgnoreIfNoMatchingField="True">UI/ElvesModernizedModIconPath</modIconPath>
+	<packageId>Mx.FactionElvesModernized</packageId>
 	<description>Combat Extended compatibility and combat overhaul for Faction - Elves (ICC.FOV.ELVES).
 
 Elves are reimagined as disciplined marksmen and skirmishers who have embraced modern firearms without abandoning their traditions. Each elven faction receives upgraded tech levels, industrial-era weapon loadouts, and CE loadout properties.
