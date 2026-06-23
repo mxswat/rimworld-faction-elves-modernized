@@ -37,11 +37,11 @@ Elves avoid:
 |---------|-----------|-----------|---------|
 | `Archer` | archer | **scout** | assault rifle |
 | `Spearmen` | spearmen | **ranger** | rifle infantry |
-| `Ranger` | swordmen | **blademaster** | melee + sidearm |
+| `Ranger` | swordmen | **warden** | support, pistol + smoke |
 | `HeavyArcher` | heavy archer | **sharpshooter** | precision rifle |
 | `Emperor` | emperor | *(unchanged)* | leader, precision + melee |
 
-Combat kinds: 3 ranged (scout, ranger, sharpshooter) + 1 melee (blademaster). Balanced lineup. Nobles and citizens are non-combat roles left as-is.
+Combat kinds: 4 ranged (scout, ranger, sharpshooter, warden) + 1 melee (swordmaster). Balanced lineup leaning toward range. Nobles and citizens are non-combat roles left as-is.
 
 ### Dark Elvish Kingdom
 
@@ -125,11 +125,11 @@ Already spacer-tier. CE changes are loadout plumbing only (magazine counts, shie
 - Ammo: FullMetalJacket (pistol)
 - Smoke grenades: 50% chance, 1-3 shots
 
-### Blademasters -- Elite melee
-- Weapons: Medieval melee + forced pistol
-- Armor: Light armor, ballistic or energy shield (60% Dark Elf / 40% High Elf)
-- Ammo: FullMetalJacket (pistol)
-- Smoke grenades: 50% chance, 1-3 shots
+### Wardens (High Elf) -- Frontline support
+- Weapons: Pistol + smoke grenade launcher
+- Armor: Light armor, ballistic or energy shield (100% chance)
+- Ammo: FullMetalJacket (pistol), smoke shells
+- Role: Provides smoke cover and shields for the squad
 
 ### Swordmasters (High Elf) -- Elite melee
 - Weapons: Medieval melee + forced pistol
@@ -205,7 +205,7 @@ Custom tags created for this mod:
 
 ### High Elvish Kingdom
 - `HighElvish_Emperor`: weaponTags precision + melee, elite CE loadout
-- `HighElvish_Ranger`: label becomes "blademaster", melee + sidearm
+- `HighElvish_Ranger`: label becomes "warden", pistol + smoke support
 - `HighElvish_Spearmen`: label becomes "ranger", AR/rifle loadout
 - `HighElvish_Swordmaster`: melee + sidearm
 - `HighElvish_Archer`: label becomes "scout", assault rifle loadout
