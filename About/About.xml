@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>Elves Expanded - CE</name>
+	<name>Faction - Elves - Modernized</name>
 	<author>opencode</author>
-	<packageId>rimword.ElvesExpandedCE</packageId>
-	<description>Compatibility and flavor expansion for Faction - Elves (ICC.FOV.ELVES) under Combat Extended.
+	<packageId>rimword.FactionElvesModernized</packageId>
+	<description>Combat Extended compatibility and combat overhaul for Faction - Elves (ICC.FOV.ELVES).
 
-Elves are reimagined as disciplined marksmen and skirmishers who have embraced modern firearms without abandoning their traditions. Each elven faction receives upgraded tech levels, industrial-era weapon loadouts, and CE ammunition preferences that emphasize precision and quality over volume of fire.
+Elves are reimagined as disciplined marksmen and skirmishers who have embraced modern firearms without abandoning their traditions. Each elven faction receives upgraded tech levels, industrial-era weapon loadouts, and CE loadout properties.
 
-- High Elvish Kingdom upgraded to Industrial tech level with scout carbines, ranger rifles, and noble precision weapons
-- Dark Elvish Kingdom upgraded to Industrial tech level with aggressive CQB loadouts and marksman support
-- Wild Elvish Tribe gains hunting rifles while retaining tribal identity
-- Celestia Elvish Empire receives CE loadout properties for its spacer arsenal
-- All combat pawn kinds configured with CE LoadoutPropertiesExtension for proper magazine counts, sidearms, and ammo preferences</description>
+- High Elvish Kingdom: upgraded to Industrial — scouts with assault rifles, rangers with ARs/snipers, sharpshooters, and wardens with smoke support
+- Dark Elvish Kingdom: upgraded to Industrial — SMG scouts, shotgun reavers, shield-wielding marauders, and melee blademasters
+- Wild Elvish Tribe: tribal shields and arrow magazines (CE-only)
+- Celestia Elvish Empire: spacer-tier loadout support
+- Full CE integration with LoadoutPropertiesExtension, ammo preferences, shields, smoke grenades, and forced sidearms</description>
 	<supportedVersions>
 		<li>1.6</li>
 	</supportedVersions>
