@@ -309,7 +309,6 @@
 		<xpath>Defs/PawnKindDef[defName="DarkElvish_Ranger"]/weaponTags</xpath>
 		<value>
 			<weaponTags>
-				<li>MedievalMeleeAdvanced</li>
 				<li>CE_OneHandedWeapon</li>
 			</weaponTags>
 		</value>
@@ -348,12 +347,12 @@
 				<shieldTags>
 					<li>OutlanderShield</li>
 				</shieldTags>
-				<shieldChance>0.8</shieldChance>
+				<shieldChance>1.0</shieldChance>
 				<forcedSidearm>
-					<sidearmMoney>
-						<min>80</min>
-						<max>200</max>
-					</sidearmMoney>
+				<sidearmMoney>
+					<min>60</min>
+					<max>150</max>
+				</sidearmMoney>
 					<weaponTags>
 						<li>CE_Sidearm</li>
 					</weaponTags>

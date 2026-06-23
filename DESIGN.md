@@ -199,8 +199,6 @@ CE integration uses `LoadoutPropertiesExtension` added via `PatchOperationAddMod
 
 Custom tags created for this mod:
 - `ElvesExpanded_Shotgun`: added to all shotguns via defName-based xpath; used by reavers to pull only shotguns without CE_AI_BROOM's pistol contamination
-- `ElvesExpanded_Caliber_556NATO`: added to weapons using AmmoSet_556x45mmNATO; used by the High Elf scout as a calibre-pure alternative to CE_AI_AR
-- `ElvesExpanded_Caliber_762NATO`: added to weapons using AmmoSet_762x51mmNATO
 - `ElvesExpanded_AssaultRifle`: added to Gun_AssaultRifle (M16A4 in CE Guns); scout tag for a single, clean assault rifle with no flintlock contamination
 
 ## Patched Pawn Kinds

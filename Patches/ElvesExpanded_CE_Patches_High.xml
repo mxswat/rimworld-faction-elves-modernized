@@ -588,7 +588,7 @@
 		<xpath>Defs/PawnKindDef[defName="HighElvish_Archer"]/weaponTags</xpath>
 		<value>
 			<weaponTags>
-				<li>CE_AI_AR</li>
+				<li>ElvesExpanded_AssaultRifle</li>
 			</weaponTags>
 		</value>
 	</Operation>
@@ -658,8 +658,8 @@
 		<xpath>Defs/PawnKindDef[defName="HighElvish_HeavyArcher"]/weaponMoney</xpath>
 		<value>
 			<weaponMoney>
-				<min>800</min>
-				<max>1600</max>
+				<min>400</min>
+				<max>525</max>
 			</weaponMoney>
 		</value>
 	</Operation>
@@ -714,6 +714,15 @@
 		</value>
 	</Operation>
 
+	<!-- Scatter the AssaultRifle tag onto the vanilla assault rifle only -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Gun_AssaultRifle"]/weaponTags</xpath>
+		<value>
+			<li>ElvesExpanded_AssaultRifle</li>
+		</value>
+	</Operation>
+
+	<!-- Scatter calibre-specific tags onto weapons by their ammo set -->
 	<!-- ==================================================================
 		HEADGEAR REQUIREMENTS: military helmet via requiredTag
 		================================================================== -->
