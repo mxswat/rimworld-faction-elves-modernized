@@ -90,11 +90,12 @@ Already spacer-tier. CE changes are loadout plumbing only (magazine counts, shie
 ## Loadout Philosophy
 
 ### Scouts -- Reconnaissance and skirmishing
-- Weapons: SMG (Dark Elf) or assault rifle (High Elf)
+- Weapons: SMG (Dark Elf) or M16A4 assault rifle (High Elf, via `ElvesExpanded_AssaultRifle` tag)
 - Armor: Light armor, cloaks
 - Ammo: FullMetalJacket (standard issue)
 - Magazines: 3 to 6
 - Sidearm: Forced melee knife
+- Budget: 400-700
 
 ### Rangers -- General infantry
 - Weapons: Assault rifle
@@ -108,7 +109,7 @@ Already spacer-tier. CE changes are loadout plumbing only (magazine counts, shie
 - Armor: Light armor, recon gear
 - Ammo: HollowPoint, ArmorPiercing, IncendiaryAP (specialist only)
 - Magazines: 3 to 5
-- Budget: 800-1600 (ensures proper snipers are reachable)
+- Budget: 400-525 (excludes Hecate II and charge snipers)
 
 ### Reavers -- Close quarters
 - Weapons: SMG + shotgun (via `ElvesExpanded_Shotgun` tag)
@@ -119,8 +120,8 @@ Already spacer-tier. CE changes are loadout plumbing only (magazine counts, shie
 - Smoke grenades: 50% chance, 1-3 shots
 
 ### Marauders -- Shield tank
-- Weapons: One-handed melee (knife, club, mace, gladius, ikwa) + forced pistol
-- Armor: Flak vest, ballistic shield (80% chance)
+- Weapons: One-handed melee (`CE_OneHandedWeapon`) + forced pistol (60-150)
+- Armor: Flak vest, ballistic shield (100% chance)
 - Ammo: FullMetalJacket (pistol)
 - Smoke grenades: 50% chance, 1-3 shots
 
@@ -198,6 +199,9 @@ CE integration uses `LoadoutPropertiesExtension` added via `PatchOperationAddMod
 
 Custom tags created for this mod:
 - `ElvesExpanded_Shotgun`: added to all shotguns via defName-based xpath; used by reavers to pull only shotguns without CE_AI_BROOM's pistol contamination
+- `ElvesExpanded_Caliber_556NATO`: added to weapons using AmmoSet_556x45mmNATO; used by the High Elf scout as a calibre-pure alternative to CE_AI_AR
+- `ElvesExpanded_Caliber_762NATO`: added to weapons using AmmoSet_762x51mmNATO
+- `ElvesExpanded_AssaultRifle`: added to Gun_AssaultRifle (M16A4 in CE Guns); scout tag for a single, clean assault rifle with no flintlock contamination
 
 ## Patched Pawn Kinds
 
