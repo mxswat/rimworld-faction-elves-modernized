@@ -89,7 +89,7 @@ Already spacer-tier. CE changes are loadout plumbing only (magazine counts, shie
 
 ## Loadout Philosophy
 
-### Scouts -- Reconnaissance and skirmishing
+### Scouts - Reconnaissance and skirmishing
 - Weapons: SMG (Dark Elf) or M16A4 assault rifle (High Elf, via `ElvesExpanded_AssaultRifle` tag)
 - Armor: Light armor, cloaks
 - Ammo: FullMetalJacket (standard issue)
@@ -97,21 +97,21 @@ Already spacer-tier. CE changes are loadout plumbing only (magazine counts, shie
 - Sidearm: Forced melee knife
 - Budget: 400-700
 
-### Rangers -- General infantry
+### Rangers - General infantry
 - Weapons: Assault rifle
 - Armor: Medium armor
 - Ammo: FullMetalJacket (standard issue)
 - Magazines: 3 to 5
 - Budget: 300-650 (prices out most charge rifles)
 
-### Sharpshooters -- Precision marksmen
+### Sharpshooters - Precision marksmen
 - Weapons: Sniper rifle, precision rifle, DMR
 - Armor: Light armor, recon gear
 - Ammo: HollowPoint, ArmorPiercing, IncendiaryAP (specialist only)
 - Magazines: 3 to 5
 - Budget: 400-525 (excludes Hecate II and charge snipers)
 
-### Reavers -- Close quarters
+### Reavers - Close quarters
 - Weapons: SMG + shotgun (via `ElvesExpanded_Shotgun` tag)
 - Armor: Flak vest, devilstrand hood, no helmet
 - Ammo: FullMetalJacket, buckshot
@@ -119,29 +119,29 @@ Already spacer-tier. CE changes are loadout plumbing only (magazine counts, shie
 - Sidearm: Melee knife (50% chance)
 - Smoke grenades: 50% chance, 1-3 shots
 
-### Marauders -- Shield tank
+### Marauders - Shield tank
 - Weapons: One-handed melee (`CE_OneHandedWeapon`) + forced pistol (60-150)
 - Armor: Flak vest, ballistic shield (100% chance)
 - Ammo: FullMetalJacket (pistol)
 - Smoke grenades: 50% chance, 1-3 shots
 
-### Wardens (High Elf) -- Frontline support
+### Wardens (High Elf) - Frontline support
 - Weapons: Smoke launcher/grenades (primary), forced pistol (sidearm)
 - Armor: Light armor, energy shield (100% chance)
 - Ammo: Smoke shells (primary), FullMetalJacket (pistol)
 - Role: Provides smoke cover and close defense for the squad
 
-### Swordmasters (High Elf) -- Elite melee
+### Swordmasters (High Elf) - Elite melee
 - Weapons: Medieval melee + forced pistol
 - Armor: Light armor, ballistic or energy shield (60%)
 - Smoke grenades: 50% chance, 1-3 shots
 
-### Spearmen -- Polearm melee
+### Spearmen - Polearm melee
 - Weapons: Polearm, spear
 - Armor: Light armor, energy or ballistic shield (30% chance)
 - Smoke grenades: 50% chance, 1-3 shots
 
-### Elites/Leaders -- Command and precision
+### Elites/Leaders - Command and precision
 - Weapons: Precision rifle + melee
 - Armor: High-quality ceremonial armor, ballistic or energy shield (60%)
 - Ammo: ArmorPiercing, HollowPoint, IncendiaryAP (specialist only)
@@ -225,7 +225,7 @@ Dark Elvish Spearmen keep their original label and melee role (unchanged).
 The reaver uses a custom tag `ElvesExpanded_Shotgun` instead of CE's `CE_AI_BROOM` for shotguns. Here is why:
 
 1. **Why were reavers spawning with handguns?**
-   Because `CE_AI_BROOM` is CE's catch-all close-quarters tag -- it matches shotguns, handguns, revolvers, and SMGs together.
+   Because `CE_AI_BROOM` is CE's catch-all close-quarters tag - it matches shotguns, handguns, revolvers, and SMGs together.
 
 2. **Why does CE_AI_BROOM include handguns?**
    CE designed it as a single pool for every short-range weapon. There is no shotgun-only tag in CE.
@@ -234,7 +234,7 @@ The reaver uses a custom tag `ElvesExpanded_Shotgun` instead of CE's `CE_AI_BROO
    RimWorld's weapon generator picks by weighted random from all weapons within budget. Once budget covers shotguns (~200 silver), all handguns (~70 silver) fit too. The odds are fixed at about 23% handgun regardless of budget size.
 
 4. **Why not patch CE items?**
-   Modifying third-party tags creates hidden dependencies -- patches can break on CE updates, affect other mods, and are fragile. Our rule: never patch CE or workshop mod items without explicit authorization.
+   Modifying third-party tags creates hidden dependencies - patches can break on CE updates, affect other mods, and are fragile. Our rule: never patch CE or workshop mod items without explicit authorization.
 
 5. **Why does a custom tag work?**
    `ElvesExpanded_Shotgun` is added to every shotgun via an xpath that matches weapons chambered in 12 gauge (`AmmoSet_12Gauge`). Only actual shotguns use this ammunition — no pistols, no revolvers. The reaver uses this tag instead of `CE_AI_BROOM`, pulling only shotguns. No CE tags are removed or modified — only added to, which is safe.

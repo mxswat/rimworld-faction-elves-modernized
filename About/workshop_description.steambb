@@ -1,4 +1,4 @@
-[h1]Faction - Elves — Modernized[/h1]
+[h1]Faction - Elves - Modernized[/h1]
 
 Combat Extended compatibility and combat overhaul for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3726293423]Faction - Elves[/url] by ICC.
 
@@ -12,22 +12,22 @@ Each elven faction gets a proper CE loadout: magazines, shields, sidearms, and a
 
 [h2]🏹 High Elvish Kingdom[/h2]
 [list]
-[*][b]Scout[/b] — M16A4, light armor, FMJ. Skirmisher.
-[*][b]Ranger[/b] — Assault rifle or DMR, medium armor. Line infantry.
-[*][b]Sharpshooter[/b] — Precision rifle, HP/AP/IncAP ammo. Stays back.
-[*][b]Warden[/b] — Smoke launcher and pistol, energy shield. Covers the advance.
-[*][b]Swordmaster[/b] — Elite melee with a sidearm for insurance.
-[*][b]Emperor[/b] — Precision rifle, melee, ballistic shield. The one you don't want to see.
+[*][b]Scout[/b] - M16A4, light armor, FMJ. Skirmisher.
+[*][b]Ranger[/b] - Assault rifle or DMR, medium armor. Line infantry.
+[*][b]Sharpshooter[/b] - Precision rifle, HP/AP/IncAP ammo. Stays back.
+[*][b]Warden[/b] - Smoke launcher and pistol, energy shield. Covers the advance.
+[*][b]Swordmaster[/b] - Elite melee with a sidearm for insurance.
+[*][b]Emperor[/b] - Precision rifle, melee, ballistic shield. The one you don't want to see.
 [/list]
 
 [h2]🗡️ Dark Elvish Kingdom[/h2]
 [list]
-[*][b]Scout[/b] — SMG with a forced melee sidearm. Gets in close.
-[*][b]Reaver[/b] — SMG and shotgun, devilstrand hood, no helmet. New pawn kind.
-[*][b]Marauder[/b] — One-handed melee behind a ballistic shield. Smoke grenades to close the gap.
-[*][b]Blademaster[/b] — Elite melee with a sidearm and a shield.
-[*][b]Spearmen[/b] — Polearm, shield, smoke. Unchanged role.
-[*][b]Lord[/b] — Precision rifle and melee. Faction leader.
+[*][b]Scout[/b] - SMG with a forced melee sidearm. Gets in close.
+[*][b]Reaver[/b] - SMG and shotgun, devilstrand hood, no helmet. New pawn kind.
+[*][b]Marauder[/b] - One-handed melee behind a ballistic shield. Smoke grenades to close the gap.
+[*][b]Blademaster[/b] - Elite melee with a sidearm and a shield.
+[*][b]Spearmen[/b] - Polearm, shield, smoke. Unchanged role.
+[*][b]Lord[/b] - Precision rifle and melee. Faction leader.
 [/list]
 
 [h2]🌲 Wild Elvish Tribe[/h2]
@@ -45,9 +45,9 @@ Each elven faction gets a proper CE loadout: magazines, shields, sidearms, and a
 
 [h2]🔧 Custom tags[/h2]
 [list]
-[*][b]ElvesExpanded_Shotgun[/b] — Added to all 12-gauge weapons. Reavers use this instead of CE_AI_BROOM so they don't spawn with handguns.
-[*][b]ElvesExpanded_AssaultRifle[/b] — Added to the vanilla M16A4 only. Keeps the scout pool clean.
-[*][b]ElvesExpanded_40mmSmokeLauncher[/b] — Added to all 40x46mm launchers. Used by the warden.
+[*][b]ElvesExpanded_Shotgun[/b] - Added to all 12-gauge weapons. Reavers use this instead of CE_AI_BROOM so they don't spawn with handguns.
+[*][b]ElvesExpanded_AssaultRifle[/b] - Added to the vanilla M16A4 only. Keeps the scout pool clean.
+[*][b]ElvesExpanded_40mmSmokeLauncher[/b] - Added to all 40x46mm launchers. Used by the warden.
 [/list]
 
 [h2]⚙️ CE loadout features[/h2]
@@ -71,9 +71,9 @@ Each elven faction gets a proper CE loadout: magazines, shields, sidearms, and a
 
 [h2]📦 Credits[/h2]
 [list]
-[*]ICC — Faction - Elves
-[*]Combat Extended team — The CE framework
-[*]CE Guns team — Weapon expansion
+[*]ICC - Faction - Elves
+[*]Combat Extended team - The CE framework
+[*]CE Guns team - Weapon expansion
 [/list]
 
 Source and design docs on GitHub.
