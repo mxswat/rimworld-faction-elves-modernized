@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- ==================================================================
+    ELVISH MELEE WEAPONS : CE ToolCE CONVERSION
+    =================================================================== -->
+
+  <!--
+    Converts the Glaive and Rapier from Faction - Elves (ICC.FOV.ELVES)
+    to CombatExtended-compatible melee stats.
+
+    The base mod defines these weapons with vanilla Tool entries that use
+    <armorPenetration>. CE's StatWorker_MeleeDamageAverage crashes on them
+    because it expects CombatExtended.ToolCE with armorPenetrationSharp and
+    armorPenetrationBlunt.
+
+    Beyond the minimal Tool -> ToolCE swap, this patch also adds:
+    - linkedBodyPartsGroup: needed for CE verb selection during auto-attack
+    - chanceFactor: reduces frequency of weak secondary strikes (handle/shaft)
+    - Bulk: encumbrance system carry penalty
+    - MeleeCounterParryBonus: parry mechanic contribution
+    - equippedStatOffsets: crit/parry/dodge, present on all CE melee weapons
+  -->
+
+  <!-- ==================== Glaive (2H polearm) ==================== -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MeleeWeapon_Glaive"]/tools</xpath>
+    <value>
+      <tools>
+        <li Class="CombatExtended.ToolCE">
+          <label>shaft</label>
+          <capacities>
+            <li>Blunt</li>
+            <li>Poke</li>
+          </capacities>
+          <power>13</power>
+          <cooldownTime>2.6</cooldownTime>
+          <armorPenetrationSharp>0.05</armorPenetrationSharp>
+          <armorPenetrationBlunt>0.15</armorPenetrationBlunt>
+          <chanceFactor>0.15</chanceFactor>
+          <linkedBodyPartsGroup>Shaft</linkedBodyPartsGroup>
+        </li>
+        <li Class="CombatExtended.ToolCE">
+          <label>point</label>
+          <capacities>
+            <li>Stab</li>
+            <li>Cut</li>
+          </capacities>
+          <power>26</power>
+          <cooldownTime>2.6</cooldownTime>
+          <armorPenetrationSharp>0.50</armorPenetrationSharp>
+          <armorPenetrationBlunt>0.0</armorPenetrationBlunt>
+          <linkedBodyPartsGroup>Head</linkedBodyPartsGroup>
+        </li>
+      </tools>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MeleeWeapon_Glaive"]/statBases</xpath>
+    <value>
+      <Bulk>12</Bulk>
+      <MeleeCounterParryBonus>1.50</MeleeCounterParryBonus>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MeleeWeapon_Glaive"]</xpath>
+    <value>
+      <equippedStatOffsets>
+        <MeleeCritChance>0.12</MeleeCritChance>
+        <MeleeParryChance>1.20</MeleeParryChance>
+        <MeleeDodgeChance>0.70</MeleeDodgeChance>
+      </equippedStatOffsets>
+    </value>
+  </Operation>
+
+  <!-- ==================== Rapier (1H light sword) ==================== -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MeleeWeapon_Rapier"]/tools</xpath>
+    <value>
+      <tools>
+        <li Class="CombatExtended.ToolCE">
+          <label>handle</label>
+          <capacities>
+            <li>Blunt</li>
+          </capacities>
+          <power>9</power>
+          <cooldownTime>2.0</cooldownTime>
+          <armorPenetrationSharp>0.0</armorPenetrationSharp>
+          <armorPenetrationBlunt>0.10</armorPenetrationBlunt>
+          <chanceFactor>0.15</chanceFactor>
+          <linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+        </li>
+        <li Class="CombatExtended.ToolCE">
+          <label>point</label>
+          <capacities>
+            <li>Stab</li>
+          </capacities>
+          <power>20</power>
+          <cooldownTime>2.2</cooldownTime>
+          <armorPenetrationSharp>0.80</armorPenetrationSharp>
+          <armorPenetrationBlunt>0.0</armorPenetrationBlunt>
+          <linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+        </li>
+        <li Class="CombatExtended.ToolCE">
+          <label>edge</label>
+          <capacities>
+            <li>Cut</li>
+          </capacities>
+          <power>18</power>
+          <cooldownTime>2.0</cooldownTime>
+          <armorPenetrationSharp>0.20</armorPenetrationSharp>
+          <armorPenetrationBlunt>0.0</armorPenetrationBlunt>
+          <linkedBodyPartsGroup>Edge</linkedBodyPartsGroup>
+        </li>
+      </tools>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MeleeWeapon_Rapier"]/statBases</xpath>
+    <value>
+      <Bulk>4</Bulk>
+      <MeleeCounterParryBonus>0.50</MeleeCounterParryBonus>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MeleeWeapon_Rapier"]</xpath>
+    <value>
+      <equippedStatOffsets>
+        <MeleeCritChance>0.25</MeleeCritChance>
+        <MeleeParryChance>0.40</MeleeParryChance>
+        <MeleeDodgeChance>0.20</MeleeDodgeChance>
+      </equippedStatOffsets>
+    </value>
+  </Operation>
+
+</Patch>
