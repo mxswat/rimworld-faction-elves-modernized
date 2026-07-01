@@ -136,36 +136,123 @@
 	</Operation>
 
 	<!-- Mechanitor: spacer guns + loadout -->
-	<Operation Class="PatchOperationAddModExtension">
-		<xpath>Defs/PawnKindDef[defName="CelestiaElvish_Mechanitor"]</xpath>
-		<value>
-			<li Class="CombatExtended.LoadoutPropertiesExtension">
-				<primaryMagazineCount>
-					<min>3</min>
-					<max>5</max>
-				</primaryMagazineCount>
-				<minAmmoCount>20</minAmmoCount>
-				<shieldMoney>
-					<min>800</min>
-					<max>1200</max>
-				</shieldMoney>
-				<shieldTags>
-					<li>OutlanderShield</li>
-				</shieldTags>
-				<shieldChance>0.5</shieldChance>
-				<sidearms>
-					<li>
-						<sidearmMoney>
-							<min>200</min>
-							<max>400</max>
-						</sidearmMoney>
-						<weaponTags>
-							<li>CE_Sidearm_Melee</li>
-						</weaponTags>
-					</li>
-				</sidearms>
-			</li>
-		</value>
-	</Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/PawnKindDef[defName="CelestiaElvish_Mechanitor"]</xpath>
+    <value>
+      <li Class="CombatExtended.LoadoutPropertiesExtension">
+        <primaryMagazineCount>
+          <min>3</min>
+          <max>5</max>
+        </primaryMagazineCount>
+        <minAmmoCount>20</minAmmoCount>
+        <shieldMoney>
+          <min>800</min>
+          <max>1200</max>
+        </shieldMoney>
+        <shieldTags>
+          <li>OutlanderShield</li>
+        </shieldTags>
+        <shieldChance>0.5</shieldChance>
+        <sidearms>
+          <li>
+            <sidearmMoney>
+              <min>200</min>
+              <max>400</max>
+            </sidearmMoney>
+            <weaponTags>
+              <li>CE_Sidearm_Melee</li>
+            </weaponTags>
+          </li>
+        </sidearms>
+      </li>
+    </value>
+  </Operation>
+
+  <!-- ==================================================================
+    FACTION TECH LEVEL &amp; TRADER UPGRADES
+    Replaces outlander trader kinds with spacer-appropriate traders
+    that stock higher-budget weapons (spacer guns).
+
+    Core fallback: Orbital_CombatSupplier / Orbital_Exotic (no Royalty
+    needed). These stock all ranged weapons by market value with no price
+    cap, so spacer weapons appear naturally.
+
+    Royalty-conditional: Empire_Caravan_TraderGeneral / Base_Empire_Standard
+    appended via MayRequire on the Operation. These explicitly filter
+    weapons to SpacerGun and also stock ultratech melee, psychic gear,
+    implants, and larger quantities of spacer components/medicine.
+    =================================================================== -->
+
+  <!-- Fix techLevel from inherited Medieval to Ultra -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/FactionDef[defName="CelestiaElvishEmpire"]/techLevel</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/FactionDef[defName="CelestiaElvishEmpire"]/techLevel</xpath>
+      <value>
+        <techLevel>Ultra</techLevel>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/FactionDef[defName="CelestiaElvishEmpire"]</xpath>
+      <value>
+        <techLevel>Ultra</techLevel>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <!-- caravanTraderKinds: core orbital fallback -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/FactionDef[defName="CelestiaElvishEmpire"]/caravanTraderKinds</xpath>
+    <value>
+      <caravanTraderKinds>
+        <li>Orbital_CombatSupplier</li>
+        <li>Orbital_Exotic</li>
+      </caravanTraderKinds>
+    </value>
+  </Operation>
+
+  <!-- caravanTraderKinds: append Empire caravan (Royalty only) -->
+  <Operation Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Royalty">
+    <xpath>Defs/FactionDef[defName="CelestiaElvishEmpire"]/caravanTraderKinds</xpath>
+    <value>
+      <li>Empire_Caravan_TraderGeneral</li>
+    </value>
+  </Operation>
+
+  <!-- visitorTraderKinds: core fallback (unchanged from vanilla) -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/FactionDef[defName="CelestiaElvishEmpire"]/visitorTraderKinds</xpath>
+    <value>
+      <visitorTraderKinds>
+        <li>Visitor_Outlander_Standard</li>
+      </visitorTraderKinds>
+    </value>
+  </Operation>
+
+  <!-- visitorTraderKinds: append Empire visitor (Royalty only) -->
+  <Operation Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Royalty">
+    <xpath>Defs/FactionDef[defName="CelestiaElvishEmpire"]/visitorTraderKinds</xpath>
+    <value>
+      <li>Empire_Caravan_TraderGeneral</li>
+    </value>
+  </Operation>
+
+  <!-- baseTraderKinds: core fallback (unchanged from vanilla) -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/FactionDef[defName="CelestiaElvishEmpire"]/baseTraderKinds</xpath>
+    <value>
+      <baseTraderKinds>
+        <li>Base_Outlander_Standard</li>
+      </baseTraderKinds>
+    </value>
+  </Operation>
+
+  <!-- baseTraderKinds: append Empire base (Royalty only) -->
+  <Operation Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Royalty">
+    <xpath>Defs/FactionDef[defName="CelestiaElvishEmpire"]/baseTraderKinds</xpath>
+    <value>
+      <li>Base_Empire_Standard</li>
+    </value>
+  </Operation>
 
 </Patch>
